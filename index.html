@@ -4,25 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mondo Digital | Creiamo siti web che fanno crescere il tuo business</title>
-
-<meta name="description" content="Mondo Digital realizza siti web moderni, professionali e responsive per aziende, professionisti e attività.">
+<title>Mondo Digital | Siti Web Professionali</title>
+<meta name="description" content="Mondo Digital realizza siti web moderni e professionali per attività, professionisti e aziende.">
 
 <style>
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
-:root{
-    --bg:#07090d;
-    --bg2:#0c1017;
-    --card:#111722;
-    --blue:#3b82f6;
-    --blue2:#60a5fa;
-    --white:#ffffff;
-    --text:#d8dee8;
-    --muted:#8994a5;
-    --border:rgba(255,255,255,.09);
-}
 
 *{
     margin:0;
@@ -36,8 +22,8 @@ html{
 
 body{
     font-family:Inter,Arial,sans-serif;
-    background:var(--bg);
-    color:var(--white);
+    background:#07090d;
+    color:#fff;
     line-height:1.6;
 }
 
@@ -46,14 +32,25 @@ a{
     color:inherit;
 }
 
+:root{
+    --blue:#3b82f6;
+    --lightblue:#60a5fa;
+    --bg:#07090d;
+    --bg2:#0d1118;
+    --card:#111722;
+    --border:rgba(255,255,255,.09);
+    --muted:#929dad;
+}
+
 /* NAVBAR */
 
 header{
     position:fixed;
-    width:100%;
     top:0;
-    z-index:999;
-    background:rgba(7,9,13,.82);
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(7,9,13,.88);
     backdrop-filter:blur(18px);
     border-bottom:1px solid var(--border);
 }
@@ -73,28 +70,27 @@ header{
 }
 
 .logo span{
-    color:var(--blue2);
+    color:var(--lightblue);
 }
 
 .menu{
     display:flex;
     align-items:center;
-    gap:28px;
+    gap:27px;
 }
 
 .menu a{
-    color:#aeb7c5;
     font-size:14px;
-    transition:.3s;
+    color:#aeb7c5;
 }
 
 .menu a:hover{
-    color:white;
+    color:#fff;
 }
 
-.menu .contact-btn{
-    background:white;
-    color:#080a0e;
+.contact-btn{
+    background:#fff;
+    color:#080a0e!important;
     padding:10px 17px;
     border-radius:9px;
     font-weight:700;
@@ -127,18 +123,18 @@ header{
 }
 
 .hero-content{
+    max-width:900px;
     position:relative;
     z-index:2;
-    max-width:900px;
 }
 
 .badge{
     display:inline-block;
-    border:1px solid rgba(96,165,250,.3);
-    background:rgba(59,130,246,.08);
-    color:var(--blue2);
     padding:8px 15px;
     border-radius:50px;
+    border:1px solid rgba(96,165,250,.3);
+    background:rgba(59,130,246,.08);
+    color:var(--lightblue);
     font-size:13px;
     font-weight:600;
     margin-bottom:25px;
@@ -167,8 +163,8 @@ header{
 .buttons{
     display:flex;
     justify-content:center;
-    flex-wrap:wrap;
     gap:14px;
+    flex-wrap:wrap;
     margin-top:35px;
 }
 
@@ -183,7 +179,6 @@ header{
 
 .primary{
     background:var(--blue);
-    box-shadow:0 10px 35px rgba(59,130,246,.25);
 }
 
 .primary:hover{
@@ -200,7 +195,7 @@ header{
     background:rgba(255,255,255,.08);
 }
 
-/* SECTIONS */
+/* SEZIONI */
 
 section{
     padding:100px 20px;
@@ -217,10 +212,10 @@ section{
 }
 
 .small-title{
-    color:var(--blue2);
-    font-size:12px;
+    color:var(--lightblue);
     text-transform:uppercase;
     letter-spacing:2px;
+    font-size:12px;
     font-weight:700;
 }
 
@@ -236,7 +231,7 @@ section{
     margin:14px auto 0;
 }
 
-/* SERVICES */
+/* SERVIZI */
 
 .services{
     background:var(--bg2);
@@ -275,7 +270,6 @@ section{
 
 .card h3{
     margin-bottom:10px;
-    font-size:19px;
 }
 
 .card p{
@@ -286,23 +280,21 @@ section{
 /* PORTFOLIO */
 
 .portfolio{
-    background:var(--bg);
+    background:#07090d;
 }
 
 .portfolio-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:20px;
+    gap:22px;
 }
 
 .project{
-    min-height:360px;
+    background:var(--card);
     border:1px solid var(--border);
     border-radius:18px;
     overflow:hidden;
-    background:var(--card);
-    transition:.35s;
-    position:relative;
+    transition:.3s;
 }
 
 .project:hover{
@@ -311,75 +303,109 @@ section{
 }
 
 .project-preview{
-    height:205px;
+    height:220px;
     padding:20px;
     display:flex;
-    align-items:center;
     justify-content:center;
-    position:relative;
+    align-items:center;
+}
+
+.restaurant-preview{
+    background:linear-gradient(135deg,#26140d,#b65b29);
+}
+
+.barber-preview{
+    background:linear-gradient(135deg,#090909,#454545);
+}
+
+.realestate-preview{
+    background:linear-gradient(135deg,#0d2433,#26759b);
+}
+
+.fake-browser{
+    width:88%;
+    height:160px;
+    background:#fff;
+    border-radius:9px;
     overflow:hidden;
+    box-shadow:0 18px 40px rgba(0,0,0,.4);
 }
 
-.restaurant{
-    background:linear-gradient(135deg,#301b13,#a94c24);
+.browser-top{
+    height:22px;
+    background:#e9e9e9;
+    display:flex;
+    align-items:center;
+    gap:5px;
+    padding-left:9px;
 }
 
-.barber{
-    background:linear-gradient(135deg,#111,#353535);
+.browser-top i{
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:#aaa;
 }
 
-.realestate{
-    background:linear-gradient(135deg,#10283a,#23648a);
-}
-
-.mockup{
-    width:85%;
-    height:145px;
-    background:white;
-    border-radius:8px;
-    box-shadow:0 15px 40px rgba(0,0,0,.35);
+.fake-content{
+    padding:20px;
     color:#111;
-    padding:15px;
 }
 
-.mockup-top{
-    height:9px;
-    width:55%;
-    background:#111;
-    border-radius:5px;
-    margin-bottom:18px;
+.fake-title{
+    font-weight:800;
+    font-size:18px;
+    margin-bottom:12px;
 }
 
-.mockup-line{
-    height:7px;
-    width:80%;
+.fake-line{
+    height:6px;
+    width:75%;
     background:#ddd;
-    margin:8px 0;
     border-radius:5px;
+    margin:7px 0;
+}
+
+.fake-button{
+    width:75px;
+    height:22px;
+    background:#222;
+    border-radius:5px;
+    margin-top:12px;
 }
 
 .project-info{
-    padding:23px;
+    padding:24px;
 }
 
 .project-info h3{
-    font-size:19px;
+    font-size:20px;
     margin-bottom:7px;
 }
 
 .project-info p{
     color:var(--muted);
     font-size:13px;
-    margin-bottom:18px;
+    margin-bottom:20px;
 }
 
-.demo{
-    color:var(--blue2);
-    font-size:13px;
+.demo-btn{
+    width:100%;
+    border:0;
+    cursor:pointer;
+    color:#fff;
+    background:var(--blue);
+    padding:12px;
+    border-radius:9px;
     font-weight:700;
+    font-size:13px;
 }
 
-/* PRICING */
+.demo-btn:hover{
+    background:#2563eb;
+}
+
+/* PREZZI */
 
 .pricing{
     background:var(--bg2);
@@ -415,14 +441,10 @@ section{
     font-weight:800;
 }
 
-.price-card h3{
-    font-size:20px;
-}
-
 .price{
     font-size:40px;
     font-weight:800;
-    margin:18px 0;
+    margin:17px 0;
 }
 
 .price span{
@@ -431,7 +453,7 @@ section{
     font-weight:400;
 }
 
-.price-card>p{
+.price-card p{
     color:var(--muted);
     font-size:13px;
 }
@@ -442,28 +464,28 @@ section{
 }
 
 .features li{
-    color:#c8ced8;
     font-size:13px;
-    margin:12px 0;
+    color:#cbd2dc;
+    margin:11px 0;
 }
 
 .features li:before{
     content:"✓";
-    color:var(--blue2);
-    font-weight:800;
+    color:var(--lightblue);
     margin-right:9px;
+    font-weight:800;
 }
 
-/* PROCESS */
+/* PROCESSO */
 
 .process{
-    background:var(--bg);
+    background:#07090d;
 }
 
 .process-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:18px;
+    gap:20px;
 }
 
 .step{
@@ -475,10 +497,10 @@ section{
     height:48px;
     margin:auto auto 18px;
     border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
     background:var(--blue);
+    display:flex;
+    justify-content:center;
+    align-items:center;
     font-weight:800;
 }
 
@@ -542,16 +564,15 @@ details p{
 
 .cta-box h2{
     font-size:clamp(32px,5vw,50px);
-    letter-spacing:-1.5px;
 }
 
 .cta-box p{
+    color:var(--muted);
     max-width:600px;
     margin:15px auto 30px;
-    color:var(--muted);
 }
 
-/* CONTACT */
+/* CONTATTI */
 
 .contact{
     background:var(--bg2);
@@ -583,10 +604,6 @@ footer p{
     font-size:12px;
 }
 
-footer strong{
-    color:white;
-}
-
 /* WHATSAPP */
 
 .whatsapp{
@@ -603,11 +620,309 @@ footer strong{
     font-size:25px;
     z-index:999;
     box-shadow:0 8px 25px rgba(0,0,0,.4);
-    transition:.3s;
 }
 
-.whatsapp:hover{
-    transform:scale(1.08);
+/* =========================
+   DEMO FULLSCREEN
+========================= */
+
+.demo-overlay{
+    position:fixed;
+    inset:0;
+    background:#050608;
+    z-index:5000;
+    display:none;
+    overflow-y:auto;
+}
+
+.demo-overlay.active{
+    display:block;
+}
+
+.demo-close{
+    position:fixed;
+    top:18px;
+    right:18px;
+    z-index:5100;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.2);
+    background:rgba(0,0,0,.7);
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+}
+
+/* DEMO RISTORANTE */
+
+.restaurant-demo{
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.7)),
+    radial-gradient(circle at 50% 30%,#9b4825,#21100b 70%);
+    padding-bottom:70px;
+}
+
+.restaurant-demo .demo-nav{
+    padding:25px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.restaurant-demo .demo-logo{
+    font-size:22px;
+    font-weight:800;
+}
+
+.restaurant-demo .demo-nav a{
+    border:1px solid rgba(255,255,255,.3);
+    padding:9px 15px;
+    border-radius:8px;
+    font-size:13px;
+}
+
+.restaurant-hero{
+    min-height:80vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.restaurant-hero h1{
+    font-size:clamp(45px,8vw,80px);
+    line-height:1;
+    margin-bottom:20px;
+}
+
+.restaurant-hero p{
+    max-width:550px;
+    margin:auto;
+    color:#ddd;
+}
+
+.demo-content{
+    max-width:1000px;
+    margin:auto;
+    padding:30px 20px;
+}
+
+.demo-title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.demo-title h2{
+    font-size:35px;
+}
+
+.menu-items{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.food{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
+    padding:25px;
+    border-radius:14px;
+}
+
+.food h3{
+    margin-bottom:8px;
+}
+
+.food p{
+    color:#aaa;
+    font-size:13px;
+}
+
+.food strong{
+    display:block;
+    margin-top:15px;
+    color:#fff;
+}
+
+/* DEMO BARBIERE */
+
+.barber-demo{
+    min-height:100vh;
+    background:#0b0b0b;
+    padding-bottom:70px;
+}
+
+.barber-demo .demo-nav{
+    padding:25px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #292929;
+}
+
+.barber-logo{
+    font-size:23px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.barber-demo .demo-nav a{
+    background:#fff;
+    color:#111;
+    padding:9px 15px;
+    border-radius:5px;
+    font-size:12px;
+    font-weight:700;
+}
+
+.barber-hero{
+    min-height:70vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:50px 20px;
+    background:radial-gradient(circle,#3b3b3b,#0b0b0b 65%);
+}
+
+.barber-hero h1{
+    font-size:clamp(48px,8vw,90px);
+    text-transform:uppercase;
+    line-height:.95;
+    letter-spacing:-3px;
+}
+
+.barber-hero p{
+    color:#aaa;
+    margin:20px auto 30px;
+}
+
+.barber-services{
+    max-width:950px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+.barber-list{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.service-box{
+    padding:30px;
+    border:1px solid #292929;
+    text-align:center;
+}
+
+.service-box h3{
+    margin-bottom:8px;
+}
+
+.service-box p{
+    color:#888;
+    font-size:13px;
+}
+
+.service-box strong{
+    display:block;
+    margin-top:15px;
+}
+
+/* DEMO IMMOBILIARE */
+
+.realestate-demo{
+    min-height:100vh;
+    background:#f5f7fa;
+    color:#17202b;
+    padding-bottom:70px;
+}
+
+.realestate-demo .demo-nav{
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#fff;
+    border-bottom:1px solid #ddd;
+}
+
+.realestate-logo{
+    font-size:21px;
+    font-weight:800;
+    color:#174d69;
+}
+
+.realestate-demo .demo-nav a{
+    background:#174d69;
+    color:#fff;
+    padding:9px 15px;
+    border-radius:6px;
+    font-size:12px;
+}
+
+.realestate-hero{
+    padding:90px 20px;
+    text-align:center;
+    background:linear-gradient(135deg,#174d69,#3c8aaa);
+    color:#fff;
+}
+
+.realestate-hero h1{
+    font-size:clamp(40px,7vw,70px);
+    line-height:1;
+}
+
+.realestate-hero p{
+    max-width:550px;
+    margin:20px auto;
+    color:#e0edf2;
+}
+
+.properties{
+    max-width:1000px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+.property-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.property{
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.property-image{
+    height:140px;
+    background:linear-gradient(135deg,#b8cbd4,#628b9d);
+}
+
+.property-info{
+    padding:20px;
+}
+
+.property-info h3{
+    margin-bottom:6px;
+}
+
+.property-info p{
+    color:#71808c;
+    font-size:13px;
+}
+
+.property-info strong{
+    display:block;
+    color:#174d69;
+    margin-top:12px;
 }
 
 /* MOBILE */
@@ -626,11 +941,12 @@ footer strong{
 
     .process-grid{
         grid-template-columns:1fr 1fr;
-        gap:30px 15px;
     }
 
-    .hero h1{
-        letter-spacing:-2px;
+    .menu-items,
+    .barber-list,
+    .property-grid{
+        grid-template-columns:1fr;
     }
 
     section{
@@ -644,12 +960,12 @@ footer strong{
         padding:16px 18px;
     }
 
-    .logo{
-        font-size:18px;
-    }
-
     .hero{
         padding-top:120px;
+    }
+
+    .hero h1{
+        letter-spacing:-2px;
     }
 
     .hero p{
@@ -660,9 +976,8 @@ footer strong{
         grid-template-columns:1fr;
     }
 
-    .card,
-    .price-card{
-        padding:25px;
+    .project-preview{
+        height:200px;
     }
 
     .whatsapp{
@@ -676,8 +991,9 @@ footer strong{
 
 <body>
 
-<header>
+<!-- NAVBAR -->
 
+<header>
 <nav class="nav">
 
 <a href="#" class="logo">
@@ -685,20 +1001,14 @@ Mondo<span>Digital</span>
 </a>
 
 <div class="menu">
-
 <a href="#servizi">Servizi</a>
 <a href="#portfolio">Portfolio</a>
 <a href="#prezzi">Prezzi</a>
 <a href="#processo">Come funziona</a>
-
-<a href="#contatti" class="contact-btn">
-Contattaci
-</a>
-
+<a href="#contatti" class="contact-btn">Contattaci</a>
 </div>
 
 </nav>
-
 </header>
 
 
@@ -718,9 +1028,9 @@ Il tuo <span class="gradient">sito web.</span>
 </h1>
 
 <p>
-Progettiamo e realizziamo siti web moderni, veloci e professionali
-per aiutare aziende, professionisti e attività a costruire una presenza
-online che conta.
+Creiamo siti web moderni, veloci e professionali
+per aziende, professionisti e attività che vogliono
+farsi trovare e crescere online.
 </p>
 
 <div class="buttons">
@@ -730,7 +1040,7 @@ Richiedi un preventivo →
 </a>
 
 <a href="#portfolio" class="btn secondary">
-Guarda i nostri lavori
+Guarda le demo
 </a>
 
 </div>
@@ -748,17 +1058,14 @@ Guarda i nostri lavori
 
 <div class="section-title">
 
-<div class="small-title">
-I nostri servizi
-</div>
+<div class="small-title">I nostri servizi</div>
 
 <h2>
 Tutto ciò che serve per andare online.
 </h2>
 
 <p>
-Costruiamo soluzioni digitali pensate per il tuo settore,
-i tuoi clienti e i tuoi obiettivi.
+Costruiamo soluzioni digitali pensate per il tuo business.
 </p>
 
 </div>
@@ -767,86 +1074,57 @@ i tuoi clienti e i tuoi obiettivi.
 <div class="grid">
 
 <div class="card">
-
 <div class="icon">🌐</div>
-
 <h3>Siti Web</h3>
-
 <p>
-Siti vetrina moderni e professionali per presentare
-la tua attività e farti trovare online.
+Siti vetrina moderni per presentare la tua attività
+e raggiungere nuovi clienti.
 </p>
-
 </div>
 
-
 <div class="card">
-
 <div class="icon">🛒</div>
-
 <h3>E-commerce</h3>
-
 <p>
-Trasforma i tuoi prodotti in un vero negozio online
-e raggiungi nuovi clienti.
+Negozi online progettati per mostrare e vendere
+i tuoi prodotti.
 </p>
-
 </div>
 
-
 <div class="card">
-
 <div class="icon">📱</div>
-
-<h3>Responsive Design</h3>
-
+<h3>Responsive</h3>
 <p>
-Il tuo sito sarà perfetto su smartphone, tablet
-e computer.
+Il sito sarà ottimizzato per smartphone,
+tablet e computer.
 </p>
-
 </div>
 
-
 <div class="card">
-
 <div class="icon">🎨</div>
-
 <h3>Design Personalizzato</h3>
-
 <p>
 Colori, struttura e stile vengono progettati
-intorno alla tua identità.
+intorno alla tua attività.
 </p>
-
 </div>
 
-
 <div class="card">
-
 <div class="icon">⚡</div>
-
 <h3>Ottimizzazione</h3>
-
 <p>
-Una struttura pulita e ottimizzata per offrire
+Struttura pulita e pensata per offrire
 un'esperienza veloce.
 </p>
-
 </div>
 
-
 <div class="card">
-
 <div class="icon">🔧</div>
-
 <h3>Assistenza</h3>
-
 <p>
-Ti aiutiamo anche dopo la pubblicazione con
-modifiche e aggiornamenti.
+Possiamo aiutarti anche dopo la pubblicazione
+con modifiche e aggiornamenti.
 </p>
-
 </div>
 
 </div>
@@ -864,17 +1142,15 @@ modifiche e aggiornamenti.
 
 <div class="section-title">
 
-<div class="small-title">
-Portfolio
-</div>
+<div class="small-title">Portfolio</div>
 
 <h2>
-Alcuni esempi di progetto.
+Guarda cosa possiamo creare.
 </h2>
 
 <p>
-Ogni sito viene costruito in base al settore e
-all'identità del cliente.
+Tre esempi di siti realizzabili per diversi tipi di attività.
+Clicca su una demo per visualizzarla.
 </p>
 
 </div>
@@ -887,15 +1163,25 @@ all'identità del cliente.
 
 <div class="project">
 
-<div class="project-preview restaurant">
+<div class="project-preview restaurant-preview">
 
-<div class="mockup">
+<div class="fake-browser">
 
-<div class="mockup-top"></div>
+<div class="browser-top">
+<i></i><i></i><i></i>
+</div>
 
-<div class="mockup-line"></div>
-<div class="mockup-line"></div>
-<div class="mockup-line" style="width:55%"></div>
+<div class="fake-content">
+
+<div class="fake-title">
+LA TAVOLA
+</div>
+
+<div class="fake-line"></div>
+<div class="fake-line"></div>
+<div class="fake-button"></div>
+
+</div>
 
 </div>
 
@@ -903,16 +1189,15 @@ all'identità del cliente.
 
 <div class="project-info">
 
-<h3>Ristorante</h3>
+<h3>🍕 Ristorante</h3>
 
 <p>
-Un sito elegante per presentare menu,
-locale, immagini e prenotazioni.
+Sito elegante per ristoranti, pizzerie e locali.
 </p>
 
-<a href="#contatti" class="demo">
-Richiedi una demo →
-</a>
+<button class="demo-btn" onclick="openDemo('restaurant')">
+Visualizza demo →
+</button>
 
 </div>
 
@@ -923,15 +1208,25 @@ Richiedi una demo →
 
 <div class="project">
 
-<div class="project-preview barber">
+<div class="project-preview barber-preview">
 
-<div class="mockup">
+<div class="fake-browser">
 
-<div class="mockup-top"></div>
+<div class="browser-top">
+<i></i><i></i><i></i>
+</div>
 
-<div class="mockup-line"></div>
-<div class="mockup-line"></div>
-<div class="mockup-line" style="width:60%"></div>
+<div class="fake-content">
+
+<div class="fake-title">
+BARBER
+</div>
+
+<div class="fake-line"></div>
+<div class="fake-line"></div>
+<div class="fake-button"></div>
+
+</div>
 
 </div>
 
@@ -939,16 +1234,15 @@ Richiedi una demo →
 
 <div class="project-info">
 
-<h3>Barbershop</h3>
+<h3>💈 Barbershop</h3>
 
 <p>
-Una presenza digitale moderna per barber,
-parrucchieri e professionisti beauty.
+Sito moderno per barber, parrucchieri e beauty.
 </p>
 
-<a href="#contatti" class="demo">
-Richiedi una demo →
-</a>
+<button class="demo-btn" onclick="openDemo('barber')">
+Visualizza demo →
+</button>
 
 </div>
 
@@ -959,15 +1253,25 @@ Richiedi una demo →
 
 <div class="project">
 
-<div class="project-preview realestate">
+<div class="project-preview realestate-preview">
 
-<div class="mockup">
+<div class="fake-browser">
 
-<div class="mockup-top"></div>
+<div class="browser-top">
+<i></i><i></i><i></i>
+</div>
 
-<div class="mockup-line"></div>
-<div class="mockup-line"></div>
-<div class="mockup-line" style="width:65%"></div>
+<div class="fake-content">
+
+<div class="fake-title">
+DOMUS
+</div>
+
+<div class="fake-line"></div>
+<div class="fake-line"></div>
+<div class="fake-button"></div>
+
+</div>
 
 </div>
 
@@ -975,16 +1279,15 @@ Richiedi una demo →
 
 <div class="project-info">
 
-<h3>Immobiliare</h3>
+<h3>🏠 Immobiliare</h3>
 
 <p>
-Una vetrina professionale per agenzie,
-immobili e richieste di contatto.
+Vetrina digitale per agenzie e professionisti immobiliari.
 </p>
 
-<a href="#contatti" class="demo">
-Richiedi una demo →
-</a>
+<button class="demo-btn" onclick="openDemo('realestate')">
+Visualizza demo →
+</button>
 
 </div>
 
@@ -1006,17 +1309,14 @@ Richiedi una demo →
 
 <div class="section-title">
 
-<div class="small-title">
-Soluzioni
-</div>
+<div class="small-title">Soluzioni</div>
 
 <h2>
-Un progetto adatto alle tue esigenze.
+Scegli il tuo progetto.
 </h2>
 
 <p>
-I prezzi sono indicativi e possono variare in base
-alla complessità del progetto.
+Prezzi indicativi. Ogni progetto viene personalizzato.
 </p>
 
 </div>
@@ -1033,19 +1333,14 @@ alla complessità del progetto.
 €199 <span>da</span>
 </div>
 
-<p>
-Per chi vuole iniziare a costruire
-la propria presenza online.
-</p>
+<p>Per chi vuole iniziare a costruire la propria presenza online.</p>
 
 <ul class="features">
-
 <li>Sito professionale</li>
 <li>Design responsive</li>
-<li>Sezione contatti</li>
+<li>Contatti</li>
 <li>WhatsApp</li>
 <li>Pubblicazione online</li>
-
 </ul>
 
 <a href="#contatti" class="btn secondary">
@@ -1057,9 +1352,7 @@ Richiedi informazioni
 
 <div class="price-card featured">
 
-<div class="popular">
-PIÙ RICHIESTO
-</div>
+<div class="popular">PIÙ RICHIESTO</div>
 
 <h3>PRO</h3>
 
@@ -1067,20 +1360,15 @@ PIÙ RICHIESTO
 €399 <span>da</span>
 </div>
 
-<p>
-Per attività che vogliono distinguersi
-dalla concorrenza.
-</p>
+<p>Per attività che vogliono distinguersi online.</p>
 
 <ul class="features">
-
 <li>Sito multipagina</li>
 <li>Design personalizzato</li>
 <li>Ottimizzazione smartphone</li>
 <li>WhatsApp e social</li>
 <li>Modulo contatti</li>
 <li>SEO di base</li>
-
 </ul>
 
 <a href="#contatti" class="btn primary">
@@ -1098,20 +1386,15 @@ Scegli PRO →
 €699 <span>da</span>
 </div>
 
-<p>
-Per aziende e progetti
-più completi.
-</p>
+<p>Per aziende e progetti più completi.</p>
 
 <ul class="features">
-
 <li>Design premium</li>
 <li>Funzioni avanzate</li>
 <li>SEO</li>
 <li>Integrazioni</li>
 <li>Struttura personalizzata</li>
 <li>Assistenza</li>
-
 </ul>
 
 <a href="#contatti" class="btn secondary">
@@ -1119,7 +1402,6 @@ Parliamone
 </a>
 
 </div>
-
 
 </div>
 
@@ -1136,9 +1418,7 @@ Parliamone
 
 <div class="section-title">
 
-<div class="small-title">
-Come funziona
-</div>
+<div class="small-title">Come funziona</div>
 
 <h2>
 Dalla tua idea al sito online.
@@ -1153,58 +1433,29 @@ Un processo semplice e trasparente.
 
 <div class="process-grid">
 
-
 <div class="step">
-
 <div class="number">1</div>
-
 <h3>Ci racconti l'idea</h3>
-
-<p>
-Ci spieghi cosa fai e cosa vuoi ottenere.
-</p>
-
+<p>Ci spieghi cosa fai e cosa vuoi ottenere.</p>
 </div>
 
-
 <div class="step">
-
 <div class="number">2</div>
-
 <h3>Progettiamo</h3>
-
-<p>
-Studiamo struttura, stile e funzionalità.
-</p>
-
+<p>Studiamo struttura, stile e funzionalità.</p>
 </div>
 
-
 <div class="step">
-
 <div class="number">3</div>
-
 <h3>Realizziamo</h3>
-
-<p>
-Costruiamo e ottimizziamo il tuo sito.
-</p>
-
+<p>Costruiamo e ottimizziamo il tuo sito.</p>
 </div>
-
 
 <div class="step">
-
 <div class="number">4</div>
-
 <h3>Online</h3>
-
-<p>
-Il tuo nuovo sito è pronto per i clienti.
-</p>
-
+<p>Il tuo nuovo sito è pronto per i clienti.</p>
 </div>
-
 
 </div>
 
@@ -1221,9 +1472,7 @@ Il tuo nuovo sito è pronto per i clienti.
 
 <div class="section-title">
 
-<div class="small-title">
-FAQ
-</div>
+<div class="small-title">FAQ</div>
 
 <h2>
 Domande frequenti.
@@ -1234,54 +1483,36 @@ Domande frequenti.
 
 <div class="faq-container">
 
-
 <details>
-
 <summary>Quanto tempo serve per creare un sito?</summary>
-
 <p>
 Dipende dal progetto. Un sito semplice può essere realizzato
 in pochi giorni, mentre progetti più complessi richiedono più tempo.
 </p>
-
 </details>
 
-
 <details>
-
 <summary>Il sito funziona su smartphone?</summary>
-
 <p>
-Sì. Tutti i nostri progetti vengono realizzati con un design
-responsive pensato anche per smartphone e tablet.
+Sì. I nostri siti sono progettati per funzionare su smartphone,
+tablet e computer.
 </p>
-
 </details>
 
-
 <details>
-
 <summary>Posso chiedere modifiche?</summary>
-
 <p>
-Certo. Il progetto viene sviluppato in base alle tue esigenze
-e possiamo concordare eventuali modifiche e aggiornamenti.
+Certo. Il progetto viene personalizzato in base alle esigenze
+del cliente.
 </p>
-
 </details>
-
 
 <details>
-
 <summary>Come posso richiedere un preventivo?</summary>
-
 <p>
-Puoi contattarci direttamente tramite WhatsApp o email
-e raccontarci il progetto che hai in mente.
+Puoi contattarci direttamente tramite WhatsApp o email.
 </p>
-
 </details>
-
 
 </div>
 
@@ -1301,8 +1532,8 @@ Pronto a portare il tuo business online?
 </h2>
 
 <p>
-Raccontaci la tua idea e scopriamo insieme
-come trasformarla in un sito web professionale.
+Raccontaci la tua idea e trasformiamola in un sito
+web professionale.
 </p>
 
 <a href="#contatti" class="btn primary">
@@ -1324,9 +1555,7 @@ Inizia il tuo progetto →
 
 <div class="section-title">
 
-<div class="small-title">
-Contatti
-</div>
+<div class="small-title">Contatti</div>
 
 <h2>
 Parliamo del tuo progetto.
@@ -1339,20 +1568,19 @@ o un preventivo personalizzato.
 
 </div>
 
-
 <div class="contact-buttons">
 
 <a
 href="https://wa.me/393392266513"
 target="_blank"
 class="btn primary">
-💬 WhatsApp
+💬 Scrivici su WhatsApp
 </a>
 
 <a
 href="mailto:federicosabatino60@gmail.com"
 class="btn secondary">
-✉️ Email
+✉️ Invia una email
 </a>
 
 </div>
@@ -1364,27 +1592,357 @@ class="btn secondary">
 </section>
 
 
-<!-- FOOTER -->
-
 <footer>
 
 <p>
-© 2026 <strong>Mondo Digital</strong> — Web Design & Digital.
+© 2026 <strong>Mondo Digital</strong> — Web Design & Digital
 </p>
 
 </footer>
 
 
-<!-- WHATSAPP -->
-
 <a
 href="https://wa.me/393392266513"
 target="_blank"
-class="whatsapp"
-aria-label="WhatsApp">
+class="whatsapp">
 💬
 </a>
 
+
+<!-- =====================================================
+     DEMO RISTORANTE
+===================================================== -->
+
+<div class="demo-overlay" id="restaurant">
+
+<button class="demo-close" onclick="closeDemo()">×</button>
+
+<div class="restaurant-demo">
+
+<div class="demo-nav">
+
+<div class="demo-logo">
+LA TAVOLA
+</div>
+
+<a href="#"
+onclick="closeDemo();return false;">
+← Mondo Digital
+</a>
+
+</div>
+
+
+<div class="restaurant-hero">
+
+<div>
+
+<div class="badge">
+RISTORANTE • PIZZERIA
+</div>
+
+<h1>
+Il gusto<br>che racconta.
+</h1>
+
+<p>
+Ingredienti selezionati, cucina italiana
+e passione per ogni piatto.
+</p>
+
+<div class="buttons">
+
+<a href="#menu-demo" class="btn primary">
+Scopri il menu
+</a>
+
+<a href="#contatti" class="btn secondary">
+Prenota un tavolo
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="demo-content" id="menu-demo">
+
+<div class="demo-title">
+<h2>Il nostro menu</h2>
+<p>Una selezione dei nostri piatti.</p>
+</div>
+
+<div class="menu-items">
+
+<div class="food">
+<h3>🍝 Pasta fresca</h3>
+<p>Tagliatelle fatte in casa con ragù tradizionale.</p>
+<strong>€14</strong>
+</div>
+
+<div class="food">
+<h3>🍕 Pizza Margherita</h3>
+<p>Pomodoro, mozzarella fior di latte e basilico.</p>
+<strong>€9</strong>
+</div>
+
+<div class="food">
+<h3>🥩 Tagliata</h3>
+<p>Carne selezionata con rucola e grana.</p>
+<strong>€22</strong>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     DEMO BARBIERE
+===================================================== -->
+
+<div class="demo-overlay" id="barber">
+
+<button class="demo-close" onclick="closeDemo()">×</button>
+
+<div class="barber-demo">
+
+<div class="demo-nav">
+
+<div class="barber-logo">
+THE BARBER
+</div>
+
+<a href="#"
+onclick="closeDemo();return false;">
+← MONDO DIGITAL
+</a>
+
+</div>
+
+
+<div class="barber-hero">
+
+<div>
+
+<div class="badge">
+BARBERSHOP • MILANO
+</div>
+
+<h1>
+Sharp.<br>
+Clean.<br>
+Classic.
+</h1>
+
+<p>
+Tagli classici, stile moderno.
+</p>
+
+<a href="#servizi-barber" class="btn primary">
+Scopri i servizi
+</a>
+
+</div>
+
+</div>
+
+
+<div class="barber-services" id="servizi-barber">
+
+<div class="demo-title">
+
+<h2>I nostri servizi</h2>
+
+<p style="color:#777;">
+Professionalità e stile.
+</p>
+
+</div>
+
+<div class="barber-list">
+
+<div class="service-box">
+<h3>Taglio</h3>
+<p>Taglio personalizzato.</p>
+<strong>€25</strong>
+</div>
+
+<div class="service-box">
+<h3>Barba</h3>
+<p>Rasatura e modellatura.</p>
+<strong>€18</strong>
+</div>
+
+<div class="service-box">
+<h3>Combo</h3>
+<p>Taglio + barba.</p>
+<strong>€38</strong>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     DEMO IMMOBILIARE
+===================================================== -->
+
+<div class="demo-overlay" id="realestate">
+
+<button class="demo-close" onclick="closeDemo()">×</button>
+
+<div class="realestate-demo">
+
+<div class="demo-nav">
+
+<div class="realestate-logo">
+DOMUS IMMOBILIARE
+</div>
+
+<a href="#"
+onclick="closeDemo();return false;">
+← Mondo Digital
+</a>
+
+</div>
+
+
+<div class="realestate-hero">
+
+<div>
+
+<div style="letter-spacing:2px;font-size:12px;">
+IMMOBILI DI QUALITÀ
+</div>
+
+<h1>
+Trova il tuo<br>
+prossimo spazio.
+</h1>
+
+<p>
+Case, appartamenti e proprietà selezionate
+per trovare la soluzione giusta per te.
+</p>
+
+<a href="#immobili" class="btn" style="background:#fff;color:#174d69;">
+Scopri gli immobili
+</a>
+
+</div>
+
+</div>
+
+
+<div class="properties" id="immobili">
+
+<div class="demo-title">
+
+<h2>Immobili in evidenza</h2>
+
+<p style="color:#71808c;">
+Le nostre proposte.
+</p>
+
+</div>
+
+
+<div class="property-grid">
+
+<div class="property">
+
+<div class="property-image"></div>
+
+<div class="property-info">
+<h3>Villa moderna</h3>
+<p>3 camere • 2 bagni • 180 m²</p>
+<strong>€420.000</strong>
+</div>
+
+</div>
+
+
+<div class="property">
+
+<div class="property-image"></div>
+
+<div class="property-info">
+<h3>Appartamento centro</h3>
+<p>2 camere • 1 bagno • 95 m²</p>
+<strong>€245.000</strong>
+</div>
+
+</div>
+
+
+<div class="property">
+
+<div class="property-image"></div>
+
+<div class="property-info">
+<h3>Attico panoramico</h3>
+<p>3 camere • 2 bagni • 140 m²</p>
+<strong>€390.000</strong>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+function openDemo(name){
+
+    document.querySelectorAll('.demo-overlay')
+    .forEach(function(demo){
+        demo.classList.remove('active');
+    });
+
+    document.getElementById(name).classList.add('active');
+
+    document.body.style.overflow='hidden';
+
+    window.scrollTo(0,0);
+}
+
+function closeDemo(){
+
+    document.querySelectorAll('.demo-overlay')
+    .forEach(function(demo){
+        demo.classList.remove('active');
+    });
+
+    document.body.style.overflow='auto';
+}
+
+document.addEventListener('keydown',function(event){
+
+    if(event.key==='Escape'){
+        closeDemo();
+    }
+
+});
+
+</script>
 
 </body>
 </html>
