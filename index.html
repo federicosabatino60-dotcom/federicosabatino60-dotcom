@@ -4,631 +4,1387 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mondo Digital  | Video & Social</title>
+<title>Mondo Digital | Creiamo siti web che fanno crescere il tuo business</title>
+
+<meta name="description" content="Mondo Digital realizza siti web moderni, professionali e responsive per aziende, professionisti e attività.">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root{
+    --bg:#07090d;
+    --bg2:#0c1017;
+    --card:#111722;
+    --blue:#3b82f6;
+    --blue2:#60a5fa;
+    --white:#ffffff;
+    --text:#d8dee8;
+    --muted:#8994a5;
+    --border:rgba(255,255,255,.09);
 }
 
-html {
-  scroll-behavior: smooth;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-  background: #08080c;
-  color: #fff;
-  line-height: 1.6;
+html{
+    scroll-behavior:smooth;
 }
 
-header {
-  padding: 22px 7%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #22222b;
-  position: sticky;
-  top: 0;
-  background: rgba(8,8,12,0.95);
-  z-index: 10;
+body{
+    font-family:Inter,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--white);
+    line-height:1.6;
 }
 
-.logo {
-  font-size: 21px;
-  font-weight: 800;
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 20px;
-  opacity: .8;
+/* NAVBAR */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:999;
+    background:rgba(7,9,13,.82);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid var(--border);
 }
 
-.hero {
-  min-height: 82vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 70px 20px;
-  background:
-    radial-gradient(circle at top, #292044 0%, #08080c 55%);
+.nav{
+    max-width:1150px;
+    margin:auto;
+    padding:18px 22px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.hero-content {
-  max-width: 900px;
+.logo{
+    font-size:21px;
+    font-weight:800;
 }
 
-.badge {
-  display: inline-block;
-  padding: 8px 15px;
-  border: 1px solid #4d3d8c;
-  border-radius: 30px;
-  color: #c9bfff;
-  margin-bottom: 25px;
-  font-size: 14px;
+.logo span{
+    color:var(--blue2);
 }
 
-.hero h1 {
-  font-size: clamp(42px, 8vw, 78px);
-  line-height: 1.05;
-  margin-bottom: 25px;
+.menu{
+    display:flex;
+    align-items:center;
+    gap:28px;
 }
 
-.hero h1 span {
-  color: #8c6cff;
+.menu a{
+    color:#aeb7c5;
+    font-size:14px;
+    transition:.3s;
 }
 
-.hero p {
-  max-width: 720px;
-  margin: auto;
-  color: #b7b7c2;
-  font-size: 19px;
+.menu a:hover{
+    color:white;
 }
 
-.buttons {
-  margin-top: 35px;
+.menu .contact-btn{
+    background:white;
+    color:#080a0e;
+    padding:10px 17px;
+    border-radius:9px;
+    font-weight:700;
 }
 
-.button {
-  display: inline-block;
-  padding: 15px 25px;
-  margin: 6px;
-  border-radius: 10px;
-  background: #7c5cff;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: .2s;
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:130px 20px 80px;
+    position:relative;
+    overflow:hidden;
 }
 
-.button:hover {
-  transform: translateY(-2px);
+.hero:before{
+    content:"";
+    position:absolute;
+    width:650px;
+    height:650px;
+    border-radius:50%;
+    background:rgba(59,130,246,.16);
+    filter:blur(130px);
+    top:-300px;
+    left:50%;
+    transform:translateX(-50%);
 }
 
-.button.secondary {
-  background: transparent;
-  border: 1px solid #393945;
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:900px;
 }
 
-section {
-  padding: 85px 7%;
+.badge{
+    display:inline-block;
+    border:1px solid rgba(96,165,250,.3);
+    background:rgba(59,130,246,.08);
+    color:var(--blue2);
+    padding:8px 15px;
+    border-radius:50px;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:25px;
 }
 
-.title {
-  text-align: center;
-  font-size: 38px;
-  margin-bottom: 15px;
+.hero h1{
+    font-size:clamp(45px,8vw,78px);
+    line-height:1.03;
+    letter-spacing:-3px;
+    margin-bottom:25px;
 }
 
-.subtitle {
-  text-align: center;
-  color: #9999a5;
-  max-width: 650px;
-  margin: 0 auto 45px;
+.gradient{
+    background:linear-gradient(90deg,#fff,#60a5fa);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
-.services,
-.pricing,
-.steps {
-  max-width: 1100px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 22px;
+.hero p{
+    max-width:680px;
+    margin:auto;
+    color:var(--muted);
+    font-size:18px;
 }
 
-.card {
-  background: #121219;
-  border: 1px solid #292932;
-  border-radius: 16px;
-  padding: 30px;
+.buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-top:35px;
 }
 
-.card h3 {
-  font-size: 22px;
-  margin-bottom: 12px;
+.btn{
+    display:inline-block;
+    padding:14px 22px;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:700;
+    transition:.3s;
 }
 
-.card p {
-  color: #a7a7b3;
+.primary{
+    background:var(--blue);
+    box-shadow:0 10px 35px rgba(59,130,246,.25);
 }
 
-.icon {
-  font-size: 35px;
-  margin-bottom: 15px;
+.primary:hover{
+    background:#2563eb;
+    transform:translateY(-2px);
 }
 
-.pricing .card {
-  position: relative;
+.secondary{
+    border:1px solid var(--border);
+    background:rgba(255,255,255,.03);
 }
 
-.price {
-  font-size: 40px;
-  font-weight: 800;
-  margin: 15px 0;
+.secondary:hover{
+    background:rgba(255,255,255,.08);
 }
 
-.price span {
-  font-size: 15px;
-  color: #999;
-  font-weight: normal;
+/* SECTIONS */
+
+section{
+    padding:100px 20px;
 }
 
-.card ul {
-  list-style: none;
-  margin: 20px 0;
-  color: #c4c4ce;
+.container{
+    max-width:1100px;
+    margin:auto;
 }
 
-.card li {
-  margin: 10px 0;
+.section-title{
+    text-align:center;
+    margin-bottom:55px;
 }
 
-.featured {
-  border: 1px solid #7c5cff;
-  transform: scale(1.02);
+.small-title{
+    color:var(--blue2);
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-weight:700;
 }
 
-.popular {
-  display: inline-block;
-  background: #7c5cff;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: bold;
+.section-title h2{
+    font-size:clamp(32px,5vw,48px);
+    letter-spacing:-1.5px;
+    margin-top:10px;
 }
 
-.step-number {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: #7c5cff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  margin-bottom: 18px;
+.section-title p{
+    color:var(--muted);
+    max-width:650px;
+    margin:14px auto 0;
 }
 
-/* NUOVA SEZIONE DIGITALE */
+/* SERVICES */
 
-.digital-section {
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  gap: 50px;
+.services{
+    background:var(--bg2);
 }
 
-.digital-text {
-  flex: 1;
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
-.digital-label {
-  font-size: 13px;
-  letter-spacing: 3px;
-  font-weight: bold;
-  color: #8c6cff;
+.card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:17px;
+    padding:30px;
+    transition:.3s;
 }
 
-.digital-text h2 {
-  font-size: 46px;
-  line-height: 1.1;
-  margin: 15px 0 25px;
+.card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(96,165,250,.3);
 }
 
-.digital-text p {
-  color: #aaaab5;
-  font-size: 17px;
-  margin-bottom: 15px;
+.icon{
+    width:48px;
+    height:48px;
+    border-radius:12px;
+    background:rgba(59,130,246,.12);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    margin-bottom:20px;
 }
 
-.digital-images {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
+.card h3{
+    margin-bottom:10px;
+    font-size:19px;
 }
 
-.digital-images img {
-  width: 100%;
-  height: 330px;
-  object-fit: cover;
-  border-radius: 16px;
-  border: 1px solid #292932;
+.card p{
+    color:var(--muted);
+    font-size:14px;
 }
 
-.contact {
-  text-align: center;
-  background: #111117;
+/* PORTFOLIO */
+
+.portfolio{
+    background:var(--bg);
 }
 
-.contact-box {
-  max-width: 750px;
-  margin: auto;
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
-.whatsapp {
-  background: #25D366;
+.project{
+    min-height:360px;
+    border:1px solid var(--border);
+    border-radius:18px;
+    overflow:hidden;
+    background:var(--card);
+    transition:.35s;
+    position:relative;
 }
 
-footer {
-  text-align: center;
-  padding: 25px;
-  color: #777783;
-  border-top: 1px solid #22222b;
+.project:hover{
+    transform:translateY(-7px);
+    border-color:rgba(96,165,250,.35);
 }
 
-@media (max-width: 700px) {
-
-  nav {
-    display: none;
-  }
-
-  section {
-    padding: 65px 20px;
-  }
-
-  .hero {
-    min-height: 78vh;
-  }
-
-  .featured {
-    transform: none;
-  }
-
-  .digital-section {
-    flex-direction: column;
-    gap: 35px;
-  }
-
-  .digital-text h2 {
-    font-size: 36px;
-  }
-
-  .digital-images {
-    width: 100%;
-  }
-
-  .digital-images img {
-    height: 230px;
-  }
+.project-preview{
+    height:205px;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
 }
+
+.restaurant{
+    background:linear-gradient(135deg,#301b13,#a94c24);
+}
+
+.barber{
+    background:linear-gradient(135deg,#111,#353535);
+}
+
+.realestate{
+    background:linear-gradient(135deg,#10283a,#23648a);
+}
+
+.mockup{
+    width:85%;
+    height:145px;
+    background:white;
+    border-radius:8px;
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+    color:#111;
+    padding:15px;
+}
+
+.mockup-top{
+    height:9px;
+    width:55%;
+    background:#111;
+    border-radius:5px;
+    margin-bottom:18px;
+}
+
+.mockup-line{
+    height:7px;
+    width:80%;
+    background:#ddd;
+    margin:8px 0;
+    border-radius:5px;
+}
+
+.project-info{
+    padding:23px;
+}
+
+.project-info h3{
+    font-size:19px;
+    margin-bottom:7px;
+}
+
+.project-info p{
+    color:var(--muted);
+    font-size:13px;
+    margin-bottom:18px;
+}
+
+.demo{
+    color:var(--blue2);
+    font-size:13px;
+    font-weight:700;
+}
+
+/* PRICING */
+
+.pricing{
+    background:var(--bg2);
+}
+
+.pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.price-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:32px;
+    position:relative;
+}
+
+.price-card.featured{
+    border-color:var(--blue);
+    box-shadow:0 0 45px rgba(59,130,246,.12);
+}
+
+.popular{
+    position:absolute;
+    top:-13px;
+    right:20px;
+    background:var(--blue);
+    padding:5px 12px;
+    border-radius:30px;
+    font-size:10px;
+    font-weight:800;
+}
+
+.price-card h3{
+    font-size:20px;
+}
+
+.price{
+    font-size:40px;
+    font-weight:800;
+    margin:18px 0;
+}
+
+.price span{
+    color:var(--muted);
+    font-size:13px;
+    font-weight:400;
+}
+
+.price-card>p{
+    color:var(--muted);
+    font-size:13px;
+}
+
+.features{
+    list-style:none;
+    margin:25px 0;
+}
+
+.features li{
+    color:#c8ced8;
+    font-size:13px;
+    margin:12px 0;
+}
+
+.features li:before{
+    content:"✓";
+    color:var(--blue2);
+    font-weight:800;
+    margin-right:9px;
+}
+
+/* PROCESS */
+
+.process{
+    background:var(--bg);
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.step{
+    text-align:center;
+}
+
+.number{
+    width:48px;
+    height:48px;
+    margin:auto auto 18px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--blue);
+    font-weight:800;
+}
+
+.step h3{
+    font-size:16px;
+    margin-bottom:8px;
+}
+
+.step p{
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* FAQ */
+
+.faq{
+    background:var(--bg2);
+}
+
+.faq-container{
+    max-width:750px;
+    margin:auto;
+}
+
+details{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:20px;
+    margin-bottom:12px;
+}
+
+summary{
+    cursor:pointer;
+    font-weight:600;
+}
+
+details p{
+    color:var(--muted);
+    margin-top:12px;
+    font-size:14px;
+}
+
+/* CTA */
+
+.cta{
+    padding:110px 20px;
+}
+
+.cta-box{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    padding:70px 25px;
+    border-radius:22px;
+    border:1px solid var(--border);
+    background:
+    radial-gradient(circle at top,rgba(59,130,246,.2),transparent 55%),
+    var(--card);
+}
+
+.cta-box h2{
+    font-size:clamp(32px,5vw,50px);
+    letter-spacing:-1.5px;
+}
+
+.cta-box p{
+    max-width:600px;
+    margin:15px auto 30px;
+    color:var(--muted);
+}
+
+/* CONTACT */
+
+.contact{
+    background:var(--bg2);
+}
+
+.contact-box{
+    max-width:750px;
+    margin:auto;
+    text-align:center;
+}
+
+.contact-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+/* FOOTER */
+
+footer{
+    padding:35px 20px;
+    border-top:1px solid var(--border);
+    text-align:center;
+}
+
+footer p{
+    color:#6f7886;
+    font-size:12px;
+}
+
+footer strong{
+    color:white;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:56px;
+    height:56px;
+    background:#25D366;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:25px;
+    z-index:999;
+    box-shadow:0 8px 25px rgba(0,0,0,.4);
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.08);
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .menu a:not(.contact-btn){
+        display:none;
+    }
+
+    .grid,
+    .portfolio-grid,
+    .pricing-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr 1fr;
+        gap:30px 15px;
+    }
+
+    .hero h1{
+        letter-spacing:-2px;
+    }
+
+    section{
+        padding:75px 18px;
+    }
+}
+
+@media(max-width:480px){
+
+    .nav{
+        padding:16px 18px;
+    }
+
+    .logo{
+        font-size:18px;
+    }
+
+    .hero{
+        padding-top:120px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr;
+    }
+
+    .card,
+    .price-card{
+        padding:25px;
+    }
+
+    .whatsapp{
+        right:18px;
+        bottom:18px;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">Federico Sabatino</div>
 
-  <nav>
-    <a href="#servizi">Servizi</a>
-    <a href="#prezzi">Prezzi</a>
-    <a href="#contatti">Contatti</a>
-  </nav>
+<nav class="nav">
+
+<a href="#" class="logo">
+Mondo<span>Digital</span>
+</a>
+
+<div class="menu">
+
+<a href="#servizi">Servizi</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#prezzi">Prezzi</a>
+<a href="#processo">Come funziona</a>
+
+<a href="#contatti" class="contact-btn">
+Contattaci
+</a>
+
+</div>
+
+</nav>
+
 </header>
+
+
+<!-- HERO -->
 
 <section class="hero">
 
-  <div class="hero-content">
+<div class="hero-content">
 
-    <div class="badge">
-      🚀 Contenuti digitali per la tua attività
-    </div>
+<div class="badge">
+✦ Web Design • Sviluppo • Digital
+</div>
 
-    <h1>
-      Fai conoscere la tua attività<br>
-      <span>sui social.</span>
-    </h1>
+<h1>
+Il tuo business.<br>
+Il tuo <span class="gradient">sito web.</span>
+</h1>
 
-    <p>
-      Creo video brevi e contenuti moderni per Instagram, TikTok
-      e Facebook, aiutando le attività a farsi notare online.
-    </p>
+<p>
+Progettiamo e realizziamo siti web moderni, veloci e professionali
+per aiutare aziende, professionisti e attività a costruire una presenza
+online che conta.
+</p>
 
-    <div class="buttons">
+<div class="buttons">
 
-      <a class="button whatsapp"
-         href="https://wa.me/393392266513">
-        💬 Scrivimi su WhatsApp
-      </a>
+<a href="#contatti" class="btn primary">
+Richiedi un preventivo →
+</a>
 
-      <a class="button secondary" href="#prezzi">
-        Scopri i pacchetti
-      </a>
+<a href="#portfolio" class="btn secondary">
+Guarda i nostri lavori
+</a>
 
-    </div>
+</div>
 
-  </div>
-
-</section>
-
-<section id="servizi">
-
-  <h2 class="title">Cosa posso fare per te</h2>
-
-  <p class="subtitle">
-    Contenuti semplici, moderni e pensati per attirare l'attenzione
-    delle persone sui social.
-  </p>
-
-  <div class="services">
-
-    <div class="card">
-      <div class="icon">🎬</div>
-      <h3>Video Reels & TikTok</h3>
-      <p>
-        Video brevi e dinamici pensati per Instagram, TikTok
-        e Facebook.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="icon">📱</div>
-      <h3>Contenuti Social</h3>
-      <p>
-        Grafiche, idee e contenuti per rendere il profilo
-        della tua attività più interessante.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="icon">✨</div>
-      <h3>Editing</h3>
-      <p>
-        Montaggio, testi, musica, effetti e sottotitoli
-        per rendere i tuoi video più professionali.
-      </p>
-    </div>
-
-  </div>
+</div>
 
 </section>
 
-<!-- NUOVA SEZIONE -->
 
-<section>
+<!-- SERVIZI -->
 
-  <div class="digital-section">
+<section class="services" id="servizi">
 
-    <div class="digital-text">
+<div class="container">
 
-      <div class="digital-label">
-        MONDO DIGITAL
-      </div>
+<div class="section-title">
 
-      <h2>
-        Dai vita alle tue idee.
-      </h2>
+<div class="small-title">
+I nostri servizi
+</div>
 
-      <p>
-        Trasformiamo le tue idee in contenuti digitali
-        capaci di farsi notare.
-      </p>
+<h2>
+Tutto ciò che serve per andare online.
+</h2>
 
-      <p>
-        Video, Reel e contenuti online pensati per negozi,
-        aziende e piccole imprese.
-      </p>
+<p>
+Costruiamo soluzioni digitali pensate per il tuo settore,
+i tuoi clienti e i tuoi obiettivi.
+</p>
 
-      <p>
-        Tu hai l'idea. Io ti aiuto a trasformarla
-        in qualcosa di concreto.
-      </p>
+</div>
 
-      <a class="button whatsapp"
-         href="https://wa.me/393392266513?text=Ciao%20Federico%2C%20vorrei%20parlarti%20di%20un%20progetto">
-        💬 Parliamo del tuo progetto
-      </a>
 
-    </div>
+<div class="grid">
 
-    <div class="digital-images">
+<div class="card">
 
-      <img
-        src="https://novasavo.com/storage/courses/1159127.webp"
-        alt="Editing video e contenuti digitali">
+<div class="icon">🌐</div>
 
-      <img
-        src="https://cdn.flowshorts.app/blog/edit-short-form-video-hero.webp"
-        alt="Montaggio Reel e video per social">
+<h3>Siti Web</h3>
 
-    </div>
+<p>
+Siti vetrina moderni e professionali per presentare
+la tua attività e farti trovare online.
+</p>
 
-  </div>
+</div>
 
-</section>
 
-<section id="prezzi">
+<div class="card">
 
-  <h2 class="title">Scegli il tuo pacchetto</h2>
+<div class="icon">🛒</div>
 
-  <p class="subtitle">
-    Puoi iniziare con un piccolo pacchetto e aumentare
-    quando vuoi.
-  </p>
+<h3>E-commerce</h3>
 
-  <div class="pricing">
+<p>
+Trasforma i tuoi prodotti in un vero negozio online
+e raggiungi nuovi clienti.
+</p>
 
-    <div class="card">
+</div>
 
-      <h3>START</h3>
 
-      <div class="price">
-        49€ <span>/ pacchetto</span>
-      </div>
+<div class="card">
 
-      <ul>
-        <li>✓ 2 video brevi</li>
-        <li>✓ Montaggio professionale</li>
-        <li>✓ Musica</li>
-        <li>✓ Testi e sottotitoli</li>
-      </ul>
+<div class="icon">📱</div>
 
-      <a class="button whatsapp"
-         href="https://wa.me/393392266513?text=Ciao%20Federico%2C%20sono%20interessato%20al%20pacchetto%20START">
-        Inizia ora
-      </a>
+<h3>Responsive Design</h3>
 
-    </div>
+<p>
+Il tuo sito sarà perfetto su smartphone, tablet
+e computer.
+</p>
 
-    <div class="card featured">
+</div>
 
-      <span class="popular">PIÙ SCELTO</span>
 
-      <h3>PRO</h3>
+<div class="card">
 
-      <div class="price">
-        99€ <span>/ pacchetto</span>
-      </div>
+<div class="icon">🎨</div>
 
-      <ul>
-        <li>✓ 5 video brevi</li>
-        <li>✓ Montaggio professionale</li>
-        <li>✓ Musica e effetti</li>
-        <li>✓ Testi e sottotitoli</li>
-        <li>✓ Idee per i contenuti</li>
-      </ul>
+<h3>Design Personalizzato</h3>
 
-      <a class="button whatsapp"
-         href="https://wa.me/393392266513?text=Ciao%20Federico%2C%20sono%20interessato%20al%20pacchetto%20PRO">
-        Scegli PRO
-      </a>
+<p>
+Colori, struttura e stile vengono progettati
+intorno alla tua identità.
+</p>
 
-    </div>
+</div>
 
-    <div class="card">
 
-      <h3>PREMIUM</h3>
+<div class="card">
 
-      <div class="price">
-        199€ <span>/ pacchetto</span>
-      </div>
+<div class="icon">⚡</div>
 
-      <ul>
-        <li>✓ 10 video brevi</li>
-        <li>✓ Editing completo</li>
-        <li>✓ Sottotitoli</li>
-        <li>✓ Idee per i contenuti</li>
-        <li>✓ Strategia base social</li>
-      </ul>
+<h3>Ottimizzazione</h3>
 
-      <a class="button whatsapp"
-         href="https://wa.me/393392266513?text=Ciao%20Federico%2C%20sono%20interessato%20al%20pacchetto%20PREMIUM">
-        Parliamone
-      </a>
+<p>
+Una struttura pulita e ottimizzata per offrire
+un'esperienza veloce.
+</p>
 
-    </div>
+</div>
 
-  </div>
+
+<div class="card">
+
+<div class="icon">🔧</div>
+
+<h3>Assistenza</h3>
+
+<p>
+Ti aiutiamo anche dopo la pubblicazione con
+modifiche e aggiornamenti.
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
-<section>
 
-  <h2 class="title">Come funziona?</h2>
+<!-- PORTFOLIO -->
 
-  <p class="subtitle">
-    È semplice. Tu mi mandi il materiale, io penso al resto.
-  </p>
+<section class="portfolio" id="portfolio">
 
-  <div class="steps">
+<div class="container">
 
-    <div class="card">
-      <div class="step-number">1</div>
-      <h3>Mi contatti</h3>
-      <p>
-        Scrivimi su WhatsApp e raccontami che tipo di attività hai
-        e cosa vorresti ottenere.
-      </p>
-    </div>
+<div class="section-title">
 
-    <div class="card">
-      <div class="step-number">2</div>
-      <h3>Mi mandi il materiale</h3>
-      <p>
-        Puoi inviarmi foto e video della tua attività direttamente
-        dal telefono.
-      </p>
-    </div>
+<div class="small-title">
+Portfolio
+</div>
 
-    <div class="card">
-      <div class="step-number">3</div>
-      <h3>Creo i contenuti</h3>
-      <p>
-        Realizzo e modifico i video per renderli pronti
-        per i tuoi social.
-      </p>
-    </div>
+<h2>
+Alcuni esempi di progetto.
+</h2>
 
-  </div>
+<p>
+Ogni sito viene costruito in base al settore e
+all'identità del cliente.
+</p>
+
+</div>
+
+
+<div class="portfolio-grid">
+
+
+<!-- RISTORANTE -->
+
+<div class="project">
+
+<div class="project-preview restaurant">
+
+<div class="mockup">
+
+<div class="mockup-top"></div>
+
+<div class="mockup-line"></div>
+<div class="mockup-line"></div>
+<div class="mockup-line" style="width:55%"></div>
+
+</div>
+
+</div>
+
+<div class="project-info">
+
+<h3>Ristorante</h3>
+
+<p>
+Un sito elegante per presentare menu,
+locale, immagini e prenotazioni.
+</p>
+
+<a href="#contatti" class="demo">
+Richiedi una demo →
+</a>
+
+</div>
+
+</div>
+
+
+<!-- BARBIERE -->
+
+<div class="project">
+
+<div class="project-preview barber">
+
+<div class="mockup">
+
+<div class="mockup-top"></div>
+
+<div class="mockup-line"></div>
+<div class="mockup-line"></div>
+<div class="mockup-line" style="width:60%"></div>
+
+</div>
+
+</div>
+
+<div class="project-info">
+
+<h3>Barbershop</h3>
+
+<p>
+Una presenza digitale moderna per barber,
+parrucchieri e professionisti beauty.
+</p>
+
+<a href="#contatti" class="demo">
+Richiedi una demo →
+</a>
+
+</div>
+
+</div>
+
+
+<!-- IMMOBILIARE -->
+
+<div class="project">
+
+<div class="project-preview realestate">
+
+<div class="mockup">
+
+<div class="mockup-top"></div>
+
+<div class="mockup-line"></div>
+<div class="mockup-line"></div>
+<div class="mockup-line" style="width:65%"></div>
+
+</div>
+
+</div>
+
+<div class="project-info">
+
+<h3>Immobiliare</h3>
+
+<p>
+Una vetrina professionale per agenzie,
+immobili e richieste di contatto.
+</p>
+
+<a href="#contatti" class="demo">
+Richiedi una demo →
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
-<section id="contatti" class="contact">
 
-  <div class="contact-box">
+<!-- PREZZI -->
 
-    <h2 class="title">
-      Vuoi far crescere la tua attività online?
-    </h2>
+<section class="pricing" id="prezzi">
 
-    <p class="subtitle">
-      Scrivimi senza impegno. Raccontami cosa fai e troviamo
-      insieme il pacchetto più adatto.
-    </p>
+<div class="container">
 
-    <a class="button whatsapp"
-       href="https://wa.me/393392266513?text=Ciao%20Federico%2C%20vorrei%20avere%20informazioni%20sui%20tuoi%20servizi">
-      💬 Contattami su Whatsapp
-    </a>
+<div class="section-title">
 
-    <br><br>
+<div class="small-title">
+Soluzioni
+</div>
 
-    <a class="button secondary"
-       href="mailto:federicosabatino60@gmail.com">
-      ✉️ Inviami una email
-    </a>
+<h2>
+Un progetto adatto alle tue esigenze.
+</h2>
 
-    <br><br>
+<p>
+I prezzi sono indicativi e possono variare in base
+alla complessità del progetto.
+</p>
 
-    <p>
-      📞 339 226 6513
-    </p>
+</div>
 
-  </div>
+
+<div class="pricing-grid">
+
+
+<div class="price-card">
+
+<h3>START</h3>
+
+<div class="price">
+€199 <span>da</span>
+</div>
+
+<p>
+Per chi vuole iniziare a costruire
+la propria presenza online.
+</p>
+
+<ul class="features">
+
+<li>Sito professionale</li>
+<li>Design responsive</li>
+<li>Sezione contatti</li>
+<li>WhatsApp</li>
+<li>Pubblicazione online</li>
+
+</ul>
+
+<a href="#contatti" class="btn secondary">
+Richiedi informazioni
+</a>
+
+</div>
+
+
+<div class="price-card featured">
+
+<div class="popular">
+PIÙ RICHIESTO
+</div>
+
+<h3>PRO</h3>
+
+<div class="price">
+€399 <span>da</span>
+</div>
+
+<p>
+Per attività che vogliono distinguersi
+dalla concorrenza.
+</p>
+
+<ul class="features">
+
+<li>Sito multipagina</li>
+<li>Design personalizzato</li>
+<li>Ottimizzazione smartphone</li>
+<li>WhatsApp e social</li>
+<li>Modulo contatti</li>
+<li>SEO di base</li>
+
+</ul>
+
+<a href="#contatti" class="btn primary">
+Scegli PRO →
+</a>
+
+</div>
+
+
+<div class="price-card">
+
+<h3>BUSINESS</h3>
+
+<div class="price">
+€699 <span>da</span>
+</div>
+
+<p>
+Per aziende e progetti
+più completi.
+</p>
+
+<ul class="features">
+
+<li>Design premium</li>
+<li>Funzioni avanzate</li>
+<li>SEO</li>
+<li>Integrazioni</li>
+<li>Struttura personalizzata</li>
+<li>Assistenza</li>
+
+</ul>
+
+<a href="#contatti" class="btn secondary">
+Parliamone
+</a>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
+
+
+<!-- PROCESSO -->
+
+<section class="process" id="processo">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small-title">
+Come funziona
+</div>
+
+<h2>
+Dalla tua idea al sito online.
+</h2>
+
+<p>
+Un processo semplice e trasparente.
+</p>
+
+</div>
+
+
+<div class="process-grid">
+
+
+<div class="step">
+
+<div class="number">1</div>
+
+<h3>Ci racconti l'idea</h3>
+
+<p>
+Ci spieghi cosa fai e cosa vuoi ottenere.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">2</div>
+
+<h3>Progettiamo</h3>
+
+<p>
+Studiamo struttura, stile e funzionalità.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">3</div>
+
+<h3>Realizziamo</h3>
+
+<p>
+Costruiamo e ottimizziamo il tuo sito.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">4</div>
+
+<h3>Online</h3>
+
+<p>
+Il tuo nuovo sito è pronto per i clienti.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="faq">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small-title">
+FAQ
+</div>
+
+<h2>
+Domande frequenti.
+</h2>
+
+</div>
+
+
+<div class="faq-container">
+
+
+<details>
+
+<summary>Quanto tempo serve per creare un sito?</summary>
+
+<p>
+Dipende dal progetto. Un sito semplice può essere realizzato
+in pochi giorni, mentre progetti più complessi richiedono più tempo.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Il sito funziona su smartphone?</summary>
+
+<p>
+Sì. Tutti i nostri progetti vengono realizzati con un design
+responsive pensato anche per smartphone e tablet.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Posso chiedere modifiche?</summary>
+
+<p>
+Certo. Il progetto viene sviluppato in base alle tue esigenze
+e possiamo concordare eventuali modifiche e aggiornamenti.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Come posso richiedere un preventivo?</summary>
+
+<p>
+Puoi contattarci direttamente tramite WhatsApp o email
+e raccontarci il progetto che hai in mente.
+</p>
+
+</details>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="cta-box">
+
+<h2>
+Pronto a portare il tuo business online?
+</h2>
+
+<p>
+Raccontaci la tua idea e scopriamo insieme
+come trasformarla in un sito web professionale.
+</p>
+
+<a href="#contatti" class="btn primary">
+Inizia il tuo progetto →
+</a>
+
+</div>
+
+</section>
+
+
+<!-- CONTATTI -->
+
+<section class="contact" id="contatti">
+
+<div class="container">
+
+<div class="contact-box">
+
+<div class="section-title">
+
+<div class="small-title">
+Contatti
+</div>
+
+<h2>
+Parliamo del tuo progetto.
+</h2>
+
+<p>
+Scrivici senza impegno per ricevere informazioni
+o un preventivo personalizzato.
+</p>
+
+</div>
+
+
+<div class="contact-buttons">
+
+<a
+href="https://wa.me/393392266513"
+target="_blank"
+class="btn primary">
+💬 WhatsApp
+</a>
+
+<a
+href="mailto:federicosabatino60@gmail.com"
+class="btn secondary">
+✉️ Email
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
 
 <footer>
-  © 2026 Federico Sabatino — Video & Social
+
+<p>
+© 2026 <strong>Mondo Digital</strong> — Web Design & Digital.
+</p>
+
 </footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+href="https://wa.me/393392266513"
+target="_blank"
+class="whatsapp"
+aria-label="WhatsApp">
+💬
+</a>
+
 
 </body>
 </html>
