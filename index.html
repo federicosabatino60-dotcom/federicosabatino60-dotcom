@@ -215,6 +215,54 @@ section {
   margin-bottom: 18px;
 }
 
+/* NUOVA SEZIONE DIGITALE */
+
+.digital-section {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.digital-text {
+  flex: 1;
+}
+
+.digital-label {
+  font-size: 13px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: #8c6cff;
+}
+
+.digital-text h2 {
+  font-size: 46px;
+  line-height: 1.1;
+  margin: 15px 0 25px;
+}
+
+.digital-text p {
+  color: #aaaab5;
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+.digital-images {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.digital-images img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid #292932;
+}
+
 .contact {
   text-align: center;
   background: #111117;
@@ -236,7 +284,8 @@ footer {
   border-top: 1px solid #22222b;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
+
   nav {
     display: none;
   }
@@ -251,6 +300,23 @@ footer {
 
   .featured {
     transform: none;
+  }
+
+  .digital-section {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .digital-text h2 {
+    font-size: 36px;
+  }
+
+  .digital-images {
+    width: 100%;
+  }
+
+  .digital-images img {
+    height: 230px;
   }
 }
 </style>
@@ -339,6 +405,60 @@ footer {
         Montaggio, testi, musica, effetti e sottotitoli
         per rendere i tuoi video più professionali.
       </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- NUOVA SEZIONE -->
+
+<section>
+
+  <div class="digital-section">
+
+    <div class="digital-text">
+
+      <div class="digital-label">
+        MONDO DIGITAL
+      </div>
+
+      <h2>
+        Dai vita alle tue idee.
+      </h2>
+
+      <p>
+        Trasformiamo le tue idee in contenuti digitali
+        capaci di farsi notare.
+      </p>
+
+      <p>
+        Video, Reel e contenuti online pensati per negozi,
+        aziende e piccole imprese.
+      </p>
+
+      <p>
+        Tu hai l'idea. Io ti aiuto a trasformarla
+        in qualcosa di concreto.
+      </p>
+
+      <a class="button whatsapp"
+         href="https://wa.me/393392266513?text=Ciao%20Federico%2C%20vorrei%20parlarti%20di%20un%20progetto">
+        💬 Parliamo del tuo progetto
+      </a>
+
+    </div>
+
+    <div class="digital-images">
+
+      <img
+        src="https://novasavo.com/storage/courses/1159127.webp"
+        alt="Editing video e contenuti digitali">
+
+      <img
+        src="https://cdn.flowshorts.app/blog/edit-short-form-video-hero.webp"
+        alt="Montaggio Reel e video per social">
+
     </div>
 
   </div>
