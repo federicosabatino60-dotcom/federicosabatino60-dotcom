@@ -5,1940 +5,1451 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Mondo Digital | Siti Web Professionali</title>
-<meta name="description" content="Mondo Digital realizza siti web moderni e professionali per attività, professionisti e aziende.">
+<meta name="description" content="Mondo Digital realizza siti web moderni, landing page, e-commerce e soluzioni digitali professionali.">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    font-family:Inter,Arial,sans-serif;
-    background:#07090d;
-    color:#fff;
-    line-height:1.6;
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: #07070a;
+    color: #fff;
+    overflow-x: hidden;
 }
 
-a{
-    text-decoration:none;
-    color:inherit;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-:root{
-    --blue:#3b82f6;
-    --lightblue:#60a5fa;
-    --bg:#07090d;
-    --bg2:#0d1118;
-    --card:#111722;
-    --border:rgba(255,255,255,.09);
-    --muted:#929dad;
-}
-
-/* NAVBAR */
-
-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-    background:rgba(7,9,13,.88);
-    backdrop-filter:blur(18px);
-    border-bottom:1px solid var(--border);
-}
-
-.nav{
-    max-width:1150px;
-    margin:auto;
-    padding:18px 22px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
-    font-size:21px;
-    font-weight:800;
-}
-
-.logo span{
-    color:var(--lightblue);
-}
-
-.menu{
-    display:flex;
-    align-items:center;
-    gap:27px;
-}
-
-.menu a{
-    font-size:14px;
-    color:#aeb7c5;
-}
-
-.menu a:hover{
-    color:#fff;
-}
-
-.contact-btn{
-    background:#fff;
-    color:#080a0e!important;
-    padding:10px 17px;
-    border-radius:9px;
-    font-weight:700;
-}
-
-/* HERO */
-
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:130px 20px 80px;
-    position:relative;
-    overflow:hidden;
-}
-
-.hero:before{
-    content:"";
-    position:absolute;
-    width:650px;
-    height:650px;
-    border-radius:50%;
-    background:rgba(59,130,246,.16);
-    filter:blur(130px);
-    top:-300px;
-    left:50%;
-    transform:translateX(-50%);
-}
-
-.hero-content{
-    max-width:900px;
-    position:relative;
-    z-index:2;
-}
-
-.badge{
-    display:inline-block;
-    padding:8px 15px;
-    border-radius:50px;
-    border:1px solid rgba(96,165,250,.3);
-    background:rgba(59,130,246,.08);
-    color:var(--lightblue);
-    font-size:13px;
-    font-weight:600;
-    margin-bottom:25px;
-}
-
-.hero h1{
-    font-size:clamp(45px,8vw,78px);
-    line-height:1.03;
-    letter-spacing:-3px;
-    margin-bottom:25px;
-}
-
-.gradient{
-    background:linear-gradient(90deg,#fff,#60a5fa);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
-
-.hero p{
-    max-width:680px;
-    margin:auto;
-    color:var(--muted);
-    font-size:18px;
-}
-
-.buttons{
-    display:flex;
-    justify-content:center;
-    gap:14px;
-    flex-wrap:wrap;
-    margin-top:35px;
-}
-
-.btn{
-    display:inline-block;
-    padding:14px 22px;
-    border-radius:10px;
-    font-size:14px;
-    font-weight:700;
-    transition:.3s;
-}
-
-.primary{
-    background:var(--blue);
-}
-
-.primary:hover{
-    background:#2563eb;
-    transform:translateY(-2px);
-}
-
-.secondary{
-    border:1px solid var(--border);
-    background:rgba(255,255,255,.03);
-}
-
-.secondary:hover{
-    background:rgba(255,255,255,.08);
-}
-
-/* SEZIONI */
-
-section{
-    padding:100px 20px;
-}
-
-.container{
-    max-width:1100px;
-    margin:auto;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:55px;
-}
-
-.small-title{
-    color:var(--lightblue);
-    text-transform:uppercase;
-    letter-spacing:2px;
-    font-size:12px;
-    font-weight:700;
-}
-
-.section-title h2{
-    font-size:clamp(32px,5vw,48px);
-    letter-spacing:-1.5px;
-    margin-top:10px;
-}
-
-.section-title p{
-    color:var(--muted);
-    max-width:650px;
-    margin:14px auto 0;
-}
-
-/* SERVIZI */
-
-.services{
-    background:var(--bg2);
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.card{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:17px;
-    padding:30px;
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-6px);
-    border-color:rgba(96,165,250,.3);
-}
-
-.icon{
-    width:48px;
-    height:48px;
-    border-radius:12px;
-    background:rgba(59,130,246,.12);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:22px;
-    margin-bottom:20px;
-}
-
-.card h3{
-    margin-bottom:10px;
-}
-
-.card p{
-    color:var(--muted);
-    font-size:14px;
-}
-
-/* PORTFOLIO */
-
-.portfolio{
-    background:#07090d;
-}
-
-.portfolio-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-}
-
-.project{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:18px;
-    overflow:hidden;
-    transition:.3s;
-}
-
-.project:hover{
-    transform:translateY(-7px);
-    border-color:rgba(96,165,250,.35);
-}
-
-.project-preview{
-    height:220px;
-    padding:20px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.restaurant-preview{
-    background:linear-gradient(135deg,#26140d,#b65b29);
-}
-
-.barber-preview{
-    background:linear-gradient(135deg,#090909,#454545);
-}
-
-.realestate-preview{
-    background:linear-gradient(135deg,#0d2433,#26759b);
-}
-
-.fake-browser{
-    width:88%;
-    height:160px;
-    background:#fff;
-    border-radius:9px;
-    overflow:hidden;
-    box-shadow:0 18px 40px rgba(0,0,0,.4);
-}
-
-.browser-top{
-    height:22px;
-    background:#e9e9e9;
-    display:flex;
-    align-items:center;
-    gap:5px;
-    padding-left:9px;
-}
-
-.browser-top i{
-    width:6px;
-    height:6px;
-    border-radius:50%;
-    background:#aaa;
-}
-
-.fake-content{
-    padding:20px;
-    color:#111;
-}
-
-.fake-title{
-    font-weight:800;
-    font-size:18px;
-    margin-bottom:12px;
-}
-
-.fake-line{
-    height:6px;
-    width:75%;
-    background:#ddd;
-    border-radius:5px;
-    margin:7px 0;
-}
-
-.fake-button{
-    width:75px;
-    height:22px;
-    background:#222;
-    border-radius:5px;
-    margin-top:12px;
-}
-
-.project-info{
-    padding:24px;
-}
-
-.project-info h3{
-    font-size:20px;
-    margin-bottom:7px;
-}
-
-.project-info p{
-    color:var(--muted);
-    font-size:13px;
-    margin-bottom:20px;
-}
-
-.demo-btn{
-    width:100%;
-    border:0;
-    cursor:pointer;
-    color:#fff;
-    background:var(--blue);
-    padding:12px;
-    border-radius:9px;
-    font-weight:700;
-    font-size:13px;
-}
-
-.demo-btn:hover{
-    background:#2563eb;
-}
-
-/* PREZZI */
-
-.pricing{
-    background:var(--bg2);
-}
-
-.pricing-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.price-card{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:18px;
-    padding:32px;
-    position:relative;
-}
-
-.price-card.featured{
-    border-color:var(--blue);
-    box-shadow:0 0 45px rgba(59,130,246,.12);
-}
-
-.popular{
-    position:absolute;
-    top:-13px;
-    right:20px;
-    background:var(--blue);
-    padding:5px 12px;
-    border-radius:30px;
-    font-size:10px;
-    font-weight:800;
-}
-
-.price{
-    font-size:40px;
-    font-weight:800;
-    margin:17px 0;
-}
-
-.price span{
-    color:var(--muted);
-    font-size:13px;
-    font-weight:400;
-}
-
-.price-card p{
-    color:var(--muted);
-    font-size:13px;
-}
-
-.features{
-    list-style:none;
-    margin:25px 0;
-}
-
-.features li{
-    font-size:13px;
-    color:#cbd2dc;
-    margin:11px 0;
-}
-
-.features li:before{
-    content:"✓";
-    color:var(--lightblue);
-    margin-right:9px;
-    font-weight:800;
-}
-
-/* PROCESSO */
-
-.process{
-    background:#07090d;
-}
-
-.process-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.step{
-    text-align:center;
-}
-
-.number{
-    width:48px;
-    height:48px;
-    margin:auto auto 18px;
-    border-radius:50%;
-    background:var(--blue);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-weight:800;
-}
-
-.step h3{
-    font-size:16px;
-    margin-bottom:8px;
-}
-
-.step p{
-    color:var(--muted);
-    font-size:13px;
-}
-
-/* FAQ */
-
-.faq{
-    background:var(--bg2);
-}
-
-.faq-container{
-    max-width:750px;
-    margin:auto;
-}
-
-details{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:12px;
-    padding:20px;
-    margin-bottom:12px;
-}
-
-summary{
-    cursor:pointer;
-    font-weight:600;
-}
-
-details p{
-    color:var(--muted);
-    margin-top:12px;
-    font-size:14px;
-}
-
-/* CTA */
-
-.cta{
-    padding:110px 20px;
-}
-
-.cta-box{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-    padding:70px 25px;
-    border-radius:22px;
-    border:1px solid var(--border);
-    background:
-    radial-gradient(circle at top,rgba(59,130,246,.2),transparent 55%),
-    var(--card);
-}
-
-.cta-box h2{
-    font-size:clamp(32px,5vw,50px);
-}
-
-.cta-box p{
-    color:var(--muted);
-    max-width:600px;
-    margin:15px auto 30px;
-}
-
-/* CONTATTI */
-
-.contact{
-    background:var(--bg2);
-}
-
-.contact-box{
-    max-width:750px;
-    margin:auto;
-    text-align:center;
-}
-
-.contact-buttons{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
-}
-
-/* FOOTER */
-
-footer{
-    padding:35px 20px;
-    border-top:1px solid var(--border);
-    text-align:center;
-}
-
-footer p{
-    color:#6f7886;
-    font-size:12px;
-}
-
-/* WHATSAPP */
-
-.whatsapp{
-    position:fixed;
-    right:22px;
-    bottom:22px;
-    width:56px;
-    height:56px;
-    background:#25D366;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:25px;
-    z-index:999;
-    box-shadow:0 8px 25px rgba(0,0,0,.4);
+button {
+    font-family: inherit;
 }
 
 /* =========================
-   DEMO FULLSCREEN
+   BACKGROUND
 ========================= */
 
-.demo-overlay{
-    position:fixed;
-    inset:0;
-    background:#050608;
-    z-index:5000;
-    display:none;
-    overflow-y:auto;
-}
-
-.demo-overlay.active{
-    display:block;
-}
-
-.demo-close{
-    position:fixed;
-    top:18px;
-    right:18px;
-    z-index:5100;
-    width:45px;
-    height:45px;
-    border-radius:50%;
-    border:1px solid rgba(255,255,255,.2);
-    background:rgba(0,0,0,.7);
-    color:#fff;
-    font-size:22px;
-    cursor:pointer;
-}
-
-/* DEMO RISTORANTE */
-
-.restaurant-demo{
-    min-height:100vh;
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
     background:
-    linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.7)),
-    radial-gradient(circle at 50% 30%,#9b4825,#21100b 70%);
-    padding-bottom:70px;
+        radial-gradient(circle at 15% 20%, rgba(124,58,237,.13), transparent 28%),
+        radial-gradient(circle at 85% 30%, rgba(0,212,255,.10), transparent 25%),
+        radial-gradient(circle at 50% 90%, rgba(124,58,237,.08), transparent 30%);
+    z-index: -2;
 }
 
-.restaurant-demo .demo-nav{
-    padding:25px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+.grid {
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+    background-size: 55px 55px;
+    mask-image: linear-gradient(to bottom, black, transparent 90%);
+    pointer-events: none;
+    z-index: -1;
 }
 
-.restaurant-demo .demo-logo{
-    font-size:22px;
-    font-weight:800;
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(7,7,10,.65);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255,255,255,.06);
 }
 
-.restaurant-demo .demo-nav a{
-    border:1px solid rgba(255,255,255,.3);
-    padding:9px 15px;
-    border-radius:8px;
-    font-size:13px;
+.logo {
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: -1px;
 }
 
-.restaurant-hero{
-    min-height:80vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:50px 20px;
+.logo span {
+    background: linear-gradient(90deg,#9b6cff,#00d9ff);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
-.restaurant-hero h1{
-    font-size:clamp(45px,8vw,80px);
-    line-height:1;
-    margin-bottom:20px;
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
 }
 
-.restaurant-hero p{
-    max-width:550px;
-    margin:auto;
-    color:#ddd;
+.nav-links a {
+    font-size: 14px;
+    color: #b7b7c2;
+    transition: .3s;
 }
 
-.demo-content{
-    max-width:1000px;
-    margin:auto;
-    padding:30px 20px;
+.nav-links a:hover {
+    color: #fff;
 }
 
-.demo-title{
-    text-align:center;
-    margin-bottom:35px;
+.nav-button {
+    padding: 11px 19px;
+    border-radius: 30px;
+    background: linear-gradient(135deg,#7c3aed,#00bfff);
+    color: #fff !important;
+    font-weight: 700;
 }
 
-.demo-title h2{
-    font-size:35px;
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    padding: 150px 7% 90px;
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    align-items: center;
+    gap: 40px;
+    position: relative;
 }
 
-.menu-items{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 9px 15px;
+    border: 1px solid rgba(151,110,255,.35);
+    background: rgba(124,58,237,.08);
+    border-radius: 30px;
+    color: #c7b6ff;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 25px;
 }
 
-.food{
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.12);
-    padding:25px;
-    border-radius:14px;
+.badge-dot {
+    width: 7px;
+    height: 7px;
+    background: #9b6cff;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #9b6cff;
 }
 
-.food h3{
-    margin-bottom:8px;
+.hero h1 {
+    font-size: clamp(48px, 6vw, 86px);
+    line-height: .98;
+    letter-spacing: -4px;
+    max-width: 800px;
 }
 
-.food p{
-    color:#aaa;
-    font-size:13px;
+.hero h1 span {
+    background: linear-gradient(100deg,#fff 15%,#9b6cff 50%,#00d9ff 90%);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
-.food strong{
-    display:block;
-    margin-top:15px;
-    color:#fff;
+.hero p {
+    max-width: 620px;
+    margin: 28px 0;
+    color: #a4a4b0;
+    font-size: 17px;
+    line-height: 1.75;
 }
 
-/* DEMO BARBIERE */
-
-.barber-demo{
-    min-height:100vh;
-    background:#0b0b0b;
-    padding-bottom:70px;
+.buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
 }
 
-.barber-demo .demo-nav{
-    padding:25px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-bottom:1px solid #292929;
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 15px 23px;
+    border-radius: 14px;
+    font-weight: 800;
+    font-size: 14px;
+    transition: .3s;
 }
 
-.barber-logo{
-    font-size:23px;
-    font-weight:800;
-    letter-spacing:2px;
+.btn-primary {
+    background: linear-gradient(135deg,#7c3aed,#00bfff);
+    box-shadow: 0 15px 40px rgba(124,58,237,.25);
 }
 
-.barber-demo .demo-nav a{
-    background:#fff;
-    color:#111;
-    padding:9px 15px;
-    border-radius:5px;
-    font-size:12px;
-    font-weight:700;
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 50px rgba(124,58,237,.4);
 }
 
-.barber-hero{
-    min-height:70vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:50px 20px;
-    background:radial-gradient(circle,#3b3b3b,#0b0b0b 65%);
+.btn-secondary {
+    border: 1px solid rgba(255,255,255,.12);
+    background: rgba(255,255,255,.035);
 }
 
-.barber-hero h1{
-    font-size:clamp(48px,8vw,90px);
-    text-transform:uppercase;
-    line-height:.95;
-    letter-spacing:-3px;
+.btn-secondary:hover {
+    background: rgba(255,255,255,.08);
+    transform: translateY(-3px);
 }
 
-.barber-hero p{
-    color:#aaa;
-    margin:20px auto 30px;
+/* =========================
+   3D ORB
+========================= */
+
+.hero-visual {
+    height: 580px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
 }
 
-.barber-services{
-    max-width:950px;
-    margin:auto;
-    padding:70px 20px;
+.orb {
+    width: 310px;
+    height: 310px;
+    border-radius: 50%;
+    position: relative;
+    background:
+        radial-gradient(circle at 30% 25%,#bfa8ff,transparent 8%),
+        radial-gradient(circle at 35% 35%,#5734ad,transparent 35%),
+        radial-gradient(circle at 65% 70%,#062f48,transparent 50%),
+        #090914;
+    box-shadow:
+        0 0 50px rgba(124,58,237,.35),
+        inset -30px -25px 70px rgba(0,0,0,.8),
+        inset 15px 10px 30px rgba(255,255,255,.08);
+    animation: float 6s ease-in-out infinite;
 }
 
-.barber-list{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
+.orb::before {
+    content: "";
+    position: absolute;
+    inset: -18px;
+    border-radius: 50%;
+    border: 1px solid rgba(150,100,255,.5);
+    box-shadow: 0 0 40px rgba(124,58,237,.3);
 }
 
-.service-box{
-    padding:30px;
-    border:1px solid #292929;
-    text-align:center;
+.orb::after {
+    content: "";
+    position: absolute;
+    inset: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,212,255,.25);
+    background:
+        linear-gradient(90deg,transparent 48%,rgba(0,212,255,.16) 49%,transparent 51%),
+        linear-gradient(transparent 48%,rgba(155,108,255,.16) 49%,transparent 51%);
+    background-size: 35px 35px;
+    animation: rotateGrid 12s linear infinite;
 }
 
-.service-box h3{
-    margin-bottom:8px;
+.ring {
+    position: absolute;
+    width: 390px;
+    height: 145px;
+    border: 2px solid rgba(0,212,255,.55);
+    border-radius: 50%;
+    transform: rotate(-25deg);
+    box-shadow: 0 0 25px rgba(0,212,255,.2);
+    animation: ringRotate 8s linear infinite;
 }
 
-.service-box p{
-    color:#888;
-    font-size:13px;
+.ring-two {
+    width: 430px;
+    height: 170px;
+    border-color: rgba(155,108,255,.45);
+    transform: rotate(55deg);
+    animation-duration: 10s;
+    animation-direction: reverse;
 }
 
-.service-box strong{
-    display:block;
-    margin-top:15px;
+.orb-text {
+    position: absolute;
+    z-index: 4;
+    text-align: center;
+    pointer-events: none;
 }
 
-/* DEMO IMMOBILIARE */
-
-.realestate-demo{
-    min-height:100vh;
-    background:#f5f7fa;
-    color:#17202b;
-    padding-bottom:70px;
+.orb-text strong {
+    display: block;
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: -2px;
 }
 
-.realestate-demo .demo-nav{
-    padding:20px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:#fff;
-    border-bottom:1px solid #ddd;
+.orb-text span {
+    font-size: 12px;
+    color: #9d8aff;
+    letter-spacing: 5px;
+    font-weight: 700;
 }
 
-.realestate-logo{
-    font-size:21px;
-    font-weight:800;
-    color:#174d69;
+.floating-card {
+    position: absolute;
+    padding: 13px 16px;
+    border-radius: 14px;
+    background: rgba(15,15,23,.75);
+    border: 1px solid rgba(255,255,255,.1);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 20px 50px rgba(0,0,0,.3);
+    font-size: 12px;
+    font-weight: 700;
 }
 
-.realestate-demo .demo-nav a{
-    background:#174d69;
-    color:#fff;
-    padding:9px 15px;
-    border-radius:6px;
-    font-size:12px;
+.card-one {
+    top: 100px;
+    right: 10px;
+    animation: floatCard 5s ease-in-out infinite;
 }
 
-.realestate-hero{
-    padding:90px 20px;
-    text-align:center;
-    background:linear-gradient(135deg,#174d69,#3c8aaa);
-    color:#fff;
+.card-two {
+    bottom: 110px;
+    left: 20px;
+    animation: floatCard 6s ease-in-out infinite reverse;
 }
 
-.realestate-hero h1{
-    font-size:clamp(40px,7vw,70px);
-    line-height:1;
+.card-three {
+    bottom: 45px;
+    right: 55px;
+    animation: floatCard 7s ease-in-out infinite;
 }
 
-.realestate-hero p{
-    max-width:550px;
-    margin:20px auto;
-    color:#e0edf2;
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+    padding: 0 7% 100px;
 }
 
-.properties{
-    max-width:1000px;
-    margin:auto;
-    padding:70px 20px;
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
 }
 
-.property-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
+.feature {
+    padding: 23px;
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 18px;
+    background: rgba(255,255,255,.025);
 }
 
-.property{
-    background:#fff;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
+.feature-icon {
+    font-size: 25px;
+    margin-bottom: 14px;
 }
 
-.property-image{
-    height:140px;
-    background:linear-gradient(135deg,#b8cbd4,#628b9d);
+.feature h3 {
+    font-size: 15px;
+    margin-bottom: 7px;
 }
 
-.property-info{
-    padding:20px;
+.feature p {
+    color: #858592;
+    font-size: 12px;
+    line-height: 1.5;
 }
 
-.property-info h3{
-    margin-bottom:6px;
+/* =========================
+   SECTIONS
+========================= */
+
+section:not(.hero):not(.features) {
+    padding: 110px 7%;
 }
 
-.property-info p{
-    color:#71808c;
-    font-size:13px;
+.section-label {
+    color: #9b6cff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
-.property-info strong{
-    display:block;
-    color:#174d69;
-    margin-top:12px;
+.section-title {
+    font-size: clamp(35px,4vw,58px);
+    letter-spacing: -2.5px;
+    line-height: 1.05;
 }
 
-/* MOBILE */
+.section-title span {
+    color: #9b6cff;
+}
 
-@media(max-width:800px){
+.section-subtitle {
+    color: #8f8f9a;
+    max-width: 650px;
+    line-height: 1.7;
+    margin-top: 17px;
+}
 
-    .menu a:not(.contact-btn){
-        display:none;
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    background: #0b0b10;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 18px;
+    margin-top: 50px;
+}
+
+.service {
+    padding: 32px;
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 24px;
+    background: linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
+    transition: .35s;
+    position: relative;
+    overflow: hidden;
+}
+
+.service::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #7c3aed;
+    filter: blur(90px);
+    opacity: .12;
+    right: -70px;
+    bottom: -70px;
+}
+
+.service:hover {
+    transform: translateY(-8px);
+    border-color: rgba(155,108,255,.35);
+}
+
+.service-number {
+    color: #6d6d78;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.service-icon {
+    font-size: 32px;
+    margin: 25px 0 17px;
+}
+
+.service h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.service p {
+    color: #898994;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+/* =========================
+   PORTFOLIO
+========================= */
+
+.portfolio {
+    background: #07070a;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.project {
+    min-height: 270px;
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255,.08);
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(145deg,#171329,#09131d);
+    transition: .4s;
+}
+
+.project:hover {
+    transform: translateY(-8px) scale(1.01);
+}
+
+.project-screen {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 15%;
+    height: 58%;
+    border-radius: 12px;
+    background: linear-gradient(145deg,#20202d,#0b0b12);
+    border: 1px solid rgba(255,255,255,.15);
+    box-shadow: 0 20px 50px rgba(0,0,0,.5);
+    padding: 18px;
+}
+
+.project-screen::before {
+    content: "";
+    display: block;
+    width: 40%;
+    height: 8px;
+    border-radius: 10px;
+    background: #8c65ed;
+    margin-bottom: 20px;
+}
+
+.project-screen::after {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 70px;
+    border-radius: 8px;
+    background: linear-gradient(135deg,#332268,#102d3d);
+}
+
+.project-info {
+    position: absolute;
+    left: 24px;
+    bottom: 20px;
+}
+
+.project-info h3 {
+    font-size: 18px;
+}
+
+.project-info p {
+    font-size: 12px;
+    color: #858592;
+    margin-top: 5px;
+}
+
+/* =========================
+   PRICING
+========================= */
+
+.pricing {
+    background: #0b0b10;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.price-card {
+    padding: 35px;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 24px;
+    background: rgba(255,255,255,.025);
+}
+
+.price-card.featured {
+    border-color: rgba(124,58,237,.6);
+    background: linear-gradient(145deg,rgba(124,58,237,.13),rgba(0,212,255,.03));
+    transform: translateY(-10px);
+}
+
+.price-name {
+    color: #aaaab4;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.price {
+    font-size: 40px;
+    font-weight: 900;
+    margin: 15px 0 20px;
+}
+
+.price small {
+    font-size: 13px;
+    color: #777783;
+    font-weight: 500;
+}
+
+.price-list {
+    list-style: none;
+    margin-bottom: 28px;
+}
+
+.price-list li {
+    color: #9999a4;
+    font-size: 13px;
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(255,255,255,.05);
+}
+
+.price-list li::before {
+    content: "✓";
+    color: #9b6cff;
+    margin-right: 9px;
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 70px;
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 23px 0;
+    background: none;
+    border: 0;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: left;
+}
+
+.faq-question span {
+    font-size: 22px;
+    color: #9b6cff;
+    transition: .3s;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    color: #858592;
+    font-size: 13px;
+    line-height: 1.7;
+    transition: max-height .4s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 150px;
+    padding-bottom: 20px;
+}
+
+.faq-item.active .faq-question span {
+    transform: rotate(45deg);
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    margin: 40px 7% 80px;
+    padding: 65px !important;
+    border-radius: 30px;
+    background:
+        radial-gradient(circle at 80% 30%,rgba(0,212,255,.18),transparent 30%),
+        radial-gradient(circle at 20% 70%,rgba(124,58,237,.25),transparent 35%),
+        #101017;
+    border: 1px solid rgba(255,255,255,.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.cta h2 {
+    font-size: clamp(32px,4vw,55px);
+    letter-spacing: -2px;
+}
+
+.cta p {
+    color: #8c8c98;
+    margin-top: 13px;
+    line-height: 1.6;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 50px 7% 30px;
+    border-top: 1px solid rgba(255,255,255,.07);
+    background: #050507;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-brand p {
+    color: #70707a;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #858590;
+    font-size: 12px;
+}
+
+.footer-bottom {
+    padding-top: 25px;
+    border-top: 1px solid rgba(255,255,255,.06);
+    color: #55555e;
+    font-size: 11px;
+    text-align: center;
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 900;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #25d366;
+    font-size: 27px;
+    box-shadow: 0 10px 35px rgba(37,211,102,.3);
+    animation: pulse 2.5s infinite;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes float {
+    0%,100% { transform: translateY(0) rotateY(0deg); }
+    50% { transform: translateY(-18px) rotateY(8deg); }
+}
+
+@keyframes rotateGrid {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes ringRotate {
+    from { transform: rotate(-25deg); }
+    to { transform: rotate(335deg); }
+}
+
+@keyframes floatCard {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes pulse {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px) {
+
+    .nav-links {
+        display: none;
     }
 
-    .grid,
+    nav {
+        padding: 18px 5%;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 125px 6% 50px;
+        text-align: center;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        height: 430px;
+        transform: scale(.82);
+        margin-top: -30px;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .service-grid,
     .portfolio-grid,
-    .pricing-grid{
-        grid-template-columns:1fr;
+    .pricing-grid {
+        grid-template-columns: 1fr;
     }
 
-    .process-grid{
-        grid-template-columns:1fr 1fr;
+    .price-card.featured {
+        transform: none;
     }
 
-    .menu-items,
-    .barber-list,
-    .property-grid{
-        grid-template-columns:1fr;
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 
-    section{
-        padding:75px 18px;
-    }
-}
-
-@media(max-width:480px){
-
-    .nav{
-        padding:16px 18px;
+    .cta {
+        margin: 20px 5% 60px;
+        padding: 40px 25px !important;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .hero{
-        padding-top:120px;
-    }
-
-    .hero h1{
-        letter-spacing:-2px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    .process-grid{
-        grid-template-columns:1fr;
-    }
-
-    .project-preview{
-        height:200px;
-    }
-
-    .whatsapp{
-        right:18px;
-        bottom:18px;
+    .footer-top {
+        flex-direction: column;
     }
 }
 
+@media(max-width:500px) {
+
+    .hero h1 {
+        font-size: 48px;
+        letter-spacing: -3px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-visual {
+        transform: scale(.68);
+        margin-left: -15%;
+        margin-right: -15%;
+    }
+
+    section:not(.hero):not(.features) {
+        padding: 80px 6%;
+    }
+}
 </style>
 </head>
 
 <body>
 
+<div class="grid"></div>
+
 <!-- NAVBAR -->
+<nav>
+    <a href="#home" class="logo">
+        MONDO <span>DIGITAL</span>
+    </a>
 
-<header>
-<nav class="nav">
-
-<a href="#" class="logo">
-Mondo<span>Digital</span>
-</a>
-
-<div class="menu">
-<a href="#servizi">Servizi</a>
-<a href="#portfolio">Portfolio</a>
-<a href="#prezzi">Prezzi</a>
-<a href="#processo">Come funziona</a>
-<a href="#contatti" class="contact-btn">Contattaci</a>
-</div>
-
+    <div class="nav-links">
+        <a href="#servizi">Servizi</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#prezzi">Prezzi</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contatti" class="nav-button">Contattaci</a>
+    </div>
 </nav>
-</header>
-
 
 <!-- HERO -->
+<section class="hero" id="home">
 
-<section class="hero">
+    <div class="hero-content">
 
-<div class="hero-content">
+        <div class="badge">
+            <span class="badge-dot"></span>
+            SOLUZIONI DIGITALI PROFESSIONALI
+        </div>
 
-<div class="badge">
-✦ Web Design • Sviluppo • Digital
-</div>
+        <h1>
+            Il tuo business.<br>
+            <span>Nel mondo digitale.</span>
+        </h1>
 
-<h1>
-Il tuo business.<br>
-Il tuo <span class="gradient">sito web.</span>
-</h1>
+        <p>
+            Creiamo siti web moderni, veloci e professionali
+            per aiutare attività e professionisti a presentarsi
+            online e trovare nuovi clienti.
+        </p>
 
-<p>
-Creiamo siti web moderni, veloci e professionali
-per aziende, professionisti e attività che vogliono
-farsi trovare e crescere online.
-</p>
+        <div class="buttons">
+            <a href="#contatti" class="btn btn-primary">
+                Richiedi un preventivo →
+            </a>
 
-<div class="buttons">
+            <a href="#portfolio" class="btn btn-secondary">
+                Guarda il portfolio
+            </a>
+        </div>
 
-<a href="#contatti" class="btn primary">
-Richiedi un preventivo →
-</a>
+    </div>
 
-<a href="#portfolio" class="btn secondary">
-Guarda le demo
-</a>
+    <!-- 3D -->
+    <div class="hero-visual">
 
-</div>
+        <div class="ring"></div>
+        <div class="ring ring-two"></div>
 
-</div>
+        <div class="orb"></div>
+
+        <div class="orb-text">
+            <strong>MONDO</strong>
+            <span>DIGITAL</span>
+        </div>
+
+        <div class="floating-card card-one">
+            🚀 Siti moderni
+        </div>
+
+        <div class="floating-card card-two">
+            📱 100% Responsive
+        </div>
+
+        <div class="floating-card card-three">
+            ⚡ Veloci & professionali
+        </div>
+
+    </div>
 
 </section>
 
+<!-- FEATURES -->
+<div class="features">
+
+    <div class="feature-grid">
+
+        <div class="feature">
+            <div class="feature-icon">🚀</div>
+            <h3>Siti veloci</h3>
+            <p>Prestazioni ottimizzate per offrire una navigazione fluida.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">📱</div>
+            <h3>Responsive</h3>
+            <p>Perfetti su smartphone, tablet e computer.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">🔎</div>
+            <h3>SEO base</h3>
+            <p>Struttura pensata per aiutare la tua presenza su Google.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">🛡️</div>
+            <h3>Supporto</h3>
+            <p>Ti aiutiamo anche dopo la consegna del progetto.</p>
+        </div>
+
+    </div>
+
+</div>
 
 <!-- SERVIZI -->
-
 <section class="services" id="servizi">
 
-<div class="container">
+    <div class="section-label">COSA FACCIAMO</div>
 
-<div class="section-title">
+    <h2 class="section-title">
+        Soluzioni digitali<br>
+        <span>su misura per te.</span>
+    </h2>
 
-<div class="small-title">I nostri servizi</div>
+    <p class="section-subtitle">
+        Non realizziamo semplicemente siti web.
+        Creiamo strumenti digitali pensati per presentare
+        il tuo business nel modo migliore.
+    </p>
 
-<h2>
-Tutto ciò che serve per andare online.
-</h2>
+    <div class="service-grid">
 
-<p>
-Costruiamo soluzioni digitali pensate per il tuo business.
-</p>
+        <div class="service">
+            <span class="service-number">01</span>
+            <div class="service-icon">💻</div>
+            <h3>Siti Web</h3>
+            <p>
+                Siti vetrina moderni e professionali
+                per presentare la tua attività online.
+            </p>
+        </div>
 
-</div>
+        <div class="service">
+            <span class="service-number">02</span>
+            <div class="service-icon">🎯</div>
+            <h3>Landing Page</h3>
+            <p>
+                Pagine progettate per promozioni,
+                servizi, campagne e acquisizione clienti.
+            </p>
+        </div>
 
+        <div class="service">
+            <span class="service-number">03</span>
+            <div class="service-icon">🛒</div>
+            <h3>E-Commerce</h3>
+            <p>
+                Soluzioni per vendere prodotti e servizi
+                direttamente online.
+            </p>
+        </div>
 
-<div class="grid">
+        <div class="service">
+            <span class="service-number">04</span>
+            <div class="service-icon">📈</div>
+            <h3>SEO Base</h3>
+            <p>
+                Ottimizziamo la struttura del sito
+                per migliorare la visibilità online.
+            </p>
+        </div>
 
-<div class="card">
-<div class="icon">🌐</div>
-<h3>Siti Web</h3>
-<p>
-Siti vetrina moderni per presentare la tua attività
-e raggiungere nuovi clienti.
-</p>
-</div>
+        <div class="service">
+            <span class="service-number">05</span>
+            <div class="service-icon">⚙️</div>
+            <h3>Manutenzione</h3>
+            <p>
+                Aggiornamenti, modifiche e supporto
+                per mantenere il tuo sito efficiente.
+            </p>
+        </div>
 
-<div class="card">
-<div class="icon">🛒</div>
-<h3>E-commerce</h3>
-<p>
-Negozi online progettati per mostrare e vendere
-i tuoi prodotti.
-</p>
-</div>
+        <div class="service">
+            <span class="service-number">06</span>
+            <div class="service-icon">✨</div>
+            <h3>Design Digitale</h3>
+            <p>
+                Interfacce moderne, animazioni e identità
+                visive pensate per distinguerti.
+            </p>
+        </div>
 
-<div class="card">
-<div class="icon">📱</div>
-<h3>Responsive</h3>
-<p>
-Il sito sarà ottimizzato per smartphone,
-tablet e computer.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">🎨</div>
-<h3>Design Personalizzato</h3>
-<p>
-Colori, struttura e stile vengono progettati
-intorno alla tua attività.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">⚡</div>
-<h3>Ottimizzazione</h3>
-<p>
-Struttura pulita e pensata per offrire
-un'esperienza veloce.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">🔧</div>
-<h3>Assistenza</h3>
-<p>
-Possiamo aiutarti anche dopo la pubblicazione
-con modifiche e aggiornamenti.
-</p>
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
-
 
 <!-- PORTFOLIO -->
-
 <section class="portfolio" id="portfolio">
 
-<div class="container">
-
-<div class="section-title">
-
-<div class="small-title">Portfolio</div>
-
-<h2>
-Guarda cosa possiamo creare.
-</h2>
-
-<p>
-Tre esempi di siti realizzabili per diversi tipi di attività.
-Clicca su una demo per visualizzarla.
-</p>
-
-</div>
-
-
-<div class="portfolio-grid">
-
-
-<!-- RISTORANTE -->
-
-<div class="project">
-
-<div class="project-preview restaurant-preview">
-
-<div class="fake-browser">
-
-<div class="browser-top">
-<i></i><i></i><i></i>
-</div>
-
-<div class="fake-content">
-
-<div class="fake-title">
-LA TAVOLA
-</div>
-
-<div class="fake-line"></div>
-<div class="fake-line"></div>
-<div class="fake-button"></div>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="project-info">
-
-<h3>🍕 Ristorante</h3>
-
-<p>
-Sito elegante per ristoranti, pizzerie e locali.
-</p>
-
-<button class="demo-btn" onclick="openDemo('restaurant')">
-Visualizza demo →
-</button>
-
-</div>
-
-</div>
-
-
-<!-- BARBIERE -->
-
-<div class="project">
-
-<div class="project-preview barber-preview">
-
-<div class="fake-browser">
-
-<div class="browser-top">
-<i></i><i></i><i></i>
-</div>
-
-<div class="fake-content">
-
-<div class="fake-title">
-BARBER
-</div>
-
-<div class="fake-line"></div>
-<div class="fake-line"></div>
-<div class="fake-button"></div>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="project-info">
-
-<h3>💈 Barbershop</h3>
-
-<p>
-Sito moderno per barber, parrucchieri e beauty.
-</p>
-
-<button class="demo-btn" onclick="openDemo('barber')">
-Visualizza demo →
-</button>
-
-</div>
-
-</div>
-
-
-<!-- IMMOBILIARE -->
-
-<div class="project">
-
-<div class="project-preview realestate-preview">
-
-<div class="fake-browser">
-
-<div class="browser-top">
-<i></i><i></i><i></i>
-</div>
-
-<div class="fake-content">
-
-<div class="fake-title">
-DOMUS
-</div>
-
-<div class="fake-line"></div>
-<div class="fake-line"></div>
-<div class="fake-button"></div>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="project-info">
-
-<h3>🏠 Immobiliare</h3>
-
-<p>
-Vetrina digitale per agenzie e professionisti immobiliari.
-</p>
-
-<button class="demo-btn" onclick="openDemo('realestate')">
-Visualizza demo →
-</button>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
+    <div class="section-label">PORTFOLIO</div>
+
+    <h2 class="section-title">
+        Progetti che fanno<br>
+        <span>una buona prima impressione.</span>
+    </h2>
+
+    <p class="section-subtitle">
+        Alcuni esempi di concept e progetti digitali
+        realizzabili per attività e professionisti.
+    </p>
+
+    <div class="portfolio-grid">
+
+        <div class="project">
+            <div class="project-screen"></div>
+            <div class="project-info">
+                <h3>Ristorante</h3>
+                <p>Sito web professionale</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-screen"></div>
+            <div class="project-info">
+                <h3>Beauty & Wellness</h3>
+                <p>Landing page moderna</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-screen"></div>
+            <div class="project-info">
+                <h3>Business</h3>
+                <p>Corporate website</p>
+            </div>
+        </div>
+
+    </div>
 
 </section>
-
 
 <!-- PREZZI -->
-
 <section class="pricing" id="prezzi">
 
-<div class="container">
+    <div class="section-label">PREZZI</div>
 
-<div class="section-title">
+    <h2 class="section-title">
+        Scegli la soluzione<br>
+        <span>giusta per te.</span>
+    </h2>
 
-<div class="small-title">Soluzioni</div>
+    <p class="section-subtitle">
+        Ogni progetto può essere personalizzato in base
+        alle esigenze della tua attività.
+    </p>
 
-<h2>
-Scegli il tuo progetto.
-</h2>
+    <div class="pricing-grid">
 
-<p>
-Prezzi indicativi. Ogni progetto viene personalizzato.
-</p>
+        <div class="price-card">
 
-</div>
+            <div class="price-name">STARTER</div>
 
+            <div class="price">
+                €199 <small>da</small>
+            </div>
 
-<div class="pricing-grid">
+            <ul class="price-list">
+                <li>Sito web professionale</li>
+                <li>Design responsive</li>
+                <li>Sezioni personalizzate</li>
+                <li>SEO base</li>
+                <li>Supporto iniziale</li>
+            </ul>
 
+            <a href="#contatti" class="btn btn-secondary">
+                Scopri di più
+            </a>
 
-<div class="price-card">
+        </div>
 
-<h3>START</h3>
+        <div class="price-card featured">
 
-<div class="price">
-€199 <span>da</span>
-</div>
+            <div class="price-name">PROFESSIONAL</div>
 
-<p>Per chi vuole iniziare a costruire la propria presenza online.</p>
+            <div class="price">
+                €399 <small>da</small>
+            </div>
 
-<ul class="features">
-<li>Sito professionale</li>
-<li>Design responsive</li>
-<li>Contatti</li>
-<li>WhatsApp</li>
-<li>Pubblicazione online</li>
-</ul>
+            <ul class="price-list">
+                <li>Sito completo personalizzato</li>
+                <li>Animazioni moderne</li>
+                <li>SEO base</li>
+                <li>Ottimizzazione mobile</li>
+                <li>Supporto post-consegna</li>
+            </ul>
 
-<a href="#contatti" class="btn secondary">
-Richiedi informazioni
-</a>
+            <a href="#contatti" class="btn btn-primary">
+                Richiedi preventivo
+            </a>
 
-</div>
+        </div>
 
+        <div class="price-card">
 
-<div class="price-card featured">
+            <div class="price-name">PREMIUM</div>
 
-<div class="popular">PIÙ RICHIESTO</div>
+            <div class="price">
+                €699 <small>da</small>
+            </div>
 
-<h3>PRO</h3>
+            <ul class="price-list">
+                <li>Progetto completamente su misura</li>
+                <li>E-commerce / funzioni avanzate</li>
+                <li>Design premium</li>
+                <li>SEO e ottimizzazione</li>
+                <li>Assistenza personalizzata</li>
+            </ul>
 
-<div class="price">
-€399 <span>da</span>
-</div>
+            <a href="#contatti" class="btn btn-secondary">
+                Parliamone
+            </a>
 
-<p>Per attività che vogliono distinguersi online.</p>
+        </div>
 
-<ul class="features">
-<li>Sito multipagina</li>
-<li>Design personalizzato</li>
-<li>Ottimizzazione smartphone</li>
-<li>WhatsApp e social</li>
-<li>Modulo contatti</li>
-<li>SEO di base</li>
-</ul>
-
-<a href="#contatti" class="btn primary">
-Scegli PRO →
-</a>
-
-</div>
-
-
-<div class="price-card">
-
-<h3>BUSINESS</h3>
-
-<div class="price">
-€699 <span>da</span>
-</div>
-
-<p>Per aziende e progetti più completi.</p>
-
-<ul class="features">
-<li>Design premium</li>
-<li>Funzioni avanzate</li>
-<li>SEO</li>
-<li>Integrazioni</li>
-<li>Struttura personalizzata</li>
-<li>Assistenza</li>
-</ul>
-
-<a href="#contatti" class="btn secondary">
-Parliamone
-</a>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
-
-
-<!-- PROCESSO -->
-
-<section class="process" id="processo">
-
-<div class="container">
-
-<div class="section-title">
-
-<div class="small-title">Come funziona</div>
-
-<h2>
-Dalla tua idea al sito online.
-</h2>
-
-<p>
-Un processo semplice e trasparente.
-</p>
-
-</div>
-
-
-<div class="process-grid">
-
-<div class="step">
-<div class="number">1</div>
-<h3>Ci racconti l'idea</h3>
-<p>Ci spieghi cosa fai e cosa vuoi ottenere.</p>
-</div>
-
-<div class="step">
-<div class="number">2</div>
-<h3>Progettiamo</h3>
-<p>Studiamo struttura, stile e funzionalità.</p>
-</div>
-
-<div class="step">
-<div class="number">3</div>
-<h3>Realizziamo</h3>
-<p>Costruiamo e ottimizziamo il tuo sito.</p>
-</div>
-
-<div class="step">
-<div class="number">4</div>
-<h3>Online</h3>
-<p>Il tuo nuovo sito è pronto per i clienti.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
 
 <!-- FAQ -->
+<section id="faq">
 
-<section class="faq">
+    <div class="faq-grid">
 
-<div class="container">
+        <div>
+            <div class="section-label">FAQ</div>
 
-<div class="section-title">
+            <h2 class="section-title">
+                Hai ancora<br>
+                <span>dubbi?</span>
+            </h2>
 
-<div class="small-title">FAQ</div>
+            <p class="section-subtitle">
+                Qui trovi alcune delle risposte alle domande
+                più frequenti.
+            </p>
+        </div>
 
-<h2>
-Domande frequenti.
-</h2>
+        <div>
 
-</div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Quanto tempo serve per realizzare un sito?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    I tempi dipendono dal progetto. Un sito semplice
+                    può essere realizzato rapidamente, mentre progetti
+                    più complessi richiedono più tempo.
+                </div>
+            </div>
 
+            <div class="faq-item">
+                <button class="faq-question">
+                    Posso richiedere modifiche?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    Sì. Il progetto viene personalizzato in base
+                    alle esigenze del cliente.
+                </div>
+            </div>
 
-<div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    Il sito funziona su smartphone?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    Sì. I siti vengono progettati per adattarsi
+                    a smartphone, tablet e computer.
+                </div>
+            </div>
 
-<details>
-<summary>Quanto tempo serve per creare un sito?</summary>
-<p>
-Dipende dal progetto. Un sito semplice può essere realizzato
-in pochi giorni, mentre progetti più complessi richiedono più tempo.
-</p>
-</details>
+            <div class="faq-item">
+                <button class="faq-question">
+                    C'è un costo di manutenzione?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    La manutenzione è opzionale e può essere concordata
+                    in base alle esigenze del progetto.
+                </div>
+            </div>
 
-<details>
-<summary>Il sito funziona su smartphone?</summary>
-<p>
-Sì. I nostri siti sono progettati per funzionare su smartphone,
-tablet e computer.
-</p>
-</details>
+        </div>
 
-<details>
-<summary>Posso chiedere modifiche?</summary>
-<p>
-Certo. Il progetto viene personalizzato in base alle esigenze
-del cliente.
-</p>
-</details>
-
-<details>
-<summary>Come posso richiedere un preventivo?</summary>
-<p>
-Puoi contattarci direttamente tramite WhatsApp o email.
-</p>
-</details>
-
-</div>
-
-</div>
+    </div>
 
 </section>
-
 
 <!-- CTA -->
+<section class="cta" id="contatti">
 
-<section class="cta">
+    <div>
+        <div class="section-label">CONTATTACI</div>
 
-<div class="cta-box">
+        <h2>
+            Pronto a portare<br>
+            il tuo business online?
+        </h2>
 
-<h2>
-Pronto a portare il tuo business online?
-</h2>
+        <p>
+            Raccontaci la tua idea e ricevi un preventivo
+            personalizzato senza impegno.
+        </p>
+    </div>
 
-<p>
-Raccontaci la tua idea e trasformiamola in un sito
-web professionale.
-</p>
+    <div class="buttons">
 
-<a href="#contatti" class="btn primary">
-Inizia il tuo progetto →
-</a>
+        <a
+            href="https://wa.me/393392266513?text=Ciao%20Mondo%20Digital%2C%20vorrei%20avere%20informazioni%20per%20realizzare%20un%20sito%20web."
+            class="btn btn-primary"
+            target="_blank">
+            Scrivici su WhatsApp →
+        </a>
 
-</div>
+        <a
+            href="mailto:federicosabatino60@gmail.com"
+            class="btn btn-secondary">
+            Invia una email
+        </a>
 
-</section>
-
-
-<!-- CONTATTI -->
-
-<section class="contact" id="contatti">
-
-<div class="container">
-
-<div class="contact-box">
-
-<div class="section-title">
-
-<div class="small-title">Contatti</div>
-
-<h2>
-Parliamo del tuo progetto.
-</h2>
-
-<p>
-Scrivici senza impegno per ricevere informazioni
-o un preventivo personalizzato.
-</p>
-
-</div>
-
-<div class="contact-buttons">
-
-<a
-href="https://wa.me/393392266513"
-target="_blank"
-class="btn primary">
-💬 Scrivici su WhatsApp
-</a>
-
-<a
-href="mailto:federicosabatino60@gmail.com"
-class="btn secondary">
-✉️ Invia una email
-</a>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-
+<!-- FOOTER -->
 <footer>
 
-<p>
-© 2026 <strong>Mondo Digital</strong> — Web Design & Digital
-</p>
+    <div class="footer-top">
+
+        <div class="footer-brand">
+            <div class="logo">
+                MONDO <span>DIGITAL</span>
+            </div>
+
+            <p>
+                Soluzioni digitali per far crescere il tuo business.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#servizi">Servizi</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#prezzi">Prezzi</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contatti">Contatti</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Mondo Digital. Tutti i diritti riservati.
+    </div>
 
 </footer>
 
-
+<!-- WHATSAPP FLOAT -->
 <a
-href="https://wa.me/393392266513"
-target="_blank"
-class="whatsapp">
-💬
+    class="whatsapp"
+    href="https://wa.me/393392266513?text=Ciao%20Mondo%20Digital%2C%20vorrei%20informazioni."
+    target="_blank"
+    aria-label="WhatsApp">
+    💬
 </a>
-
-
-<!-- =====================================================
-     DEMO RISTORANTE
-===================================================== -->
-
-<div class="demo-overlay" id="restaurant">
-
-<button class="demo-close" onclick="closeDemo()">×</button>
-
-<div class="restaurant-demo">
-
-<div class="demo-nav">
-
-<div class="demo-logo">
-LA TAVOLA
-</div>
-
-<a href="#"
-onclick="closeDemo();return false;">
-← Mondo Digital
-</a>
-
-</div>
-
-
-<div class="restaurant-hero">
-
-<div>
-
-<div class="badge">
-RISTORANTE • PIZZERIA
-</div>
-
-<h1>
-Il gusto<br>che racconta.
-</h1>
-
-<p>
-Ingredienti selezionati, cucina italiana
-e passione per ogni piatto.
-</p>
-
-<div class="buttons">
-
-<a href="#menu-demo" class="btn primary">
-Scopri il menu
-</a>
-
-<a href="#contatti" class="btn secondary">
-Prenota un tavolo
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="demo-content" id="menu-demo">
-
-<div class="demo-title">
-<h2>Il nostro menu</h2>
-<p>Una selezione dei nostri piatti.</p>
-</div>
-
-<div class="menu-items">
-
-<div class="food">
-<h3>🍝 Pasta fresca</h3>
-<p>Tagliatelle fatte in casa con ragù tradizionale.</p>
-<strong>€14</strong>
-</div>
-
-<div class="food">
-<h3>🍕 Pizza Margherita</h3>
-<p>Pomodoro, mozzarella fior di latte e basilico.</p>
-<strong>€9</strong>
-</div>
-
-<div class="food">
-<h3>🥩 Tagliata</h3>
-<p>Carne selezionata con rucola e grana.</p>
-<strong>€22</strong>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- =====================================================
-     DEMO BARBIERE
-===================================================== -->
-
-<div class="demo-overlay" id="barber">
-
-<button class="demo-close" onclick="closeDemo()">×</button>
-
-<div class="barber-demo">
-
-<div class="demo-nav">
-
-<div class="barber-logo">
-THE BARBER
-</div>
-
-<a href="#"
-onclick="closeDemo();return false;">
-← MONDO DIGITAL
-</a>
-
-</div>
-
-
-<div class="barber-hero">
-
-<div>
-
-<div class="badge">
-BARBERSHOP • MILANO
-</div>
-
-<h1>
-Sharp.<br>
-Clean.<br>
-Classic.
-</h1>
-
-<p>
-Tagli classici, stile moderno.
-</p>
-
-<a href="#servizi-barber" class="btn primary">
-Scopri i servizi
-</a>
-
-</div>
-
-</div>
-
-
-<div class="barber-services" id="servizi-barber">
-
-<div class="demo-title">
-
-<h2>I nostri servizi</h2>
-
-<p style="color:#777;">
-Professionalità e stile.
-</p>
-
-</div>
-
-<div class="barber-list">
-
-<div class="service-box">
-<h3>Taglio</h3>
-<p>Taglio personalizzato.</p>
-<strong>€25</strong>
-</div>
-
-<div class="service-box">
-<h3>Barba</h3>
-<p>Rasatura e modellatura.</p>
-<strong>€18</strong>
-</div>
-
-<div class="service-box">
-<h3>Combo</h3>
-<p>Taglio + barba.</p>
-<strong>€38</strong>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- =====================================================
-     DEMO IMMOBILIARE
-===================================================== -->
-
-<div class="demo-overlay" id="realestate">
-
-<button class="demo-close" onclick="closeDemo()">×</button>
-
-<div class="realestate-demo">
-
-<div class="demo-nav">
-
-<div class="realestate-logo">
-DOMUS IMMOBILIARE
-</div>
-
-<a href="#"
-onclick="closeDemo();return false;">
-← Mondo Digital
-</a>
-
-</div>
-
-
-<div class="realestate-hero">
-
-<div>
-
-<div style="letter-spacing:2px;font-size:12px;">
-IMMOBILI DI QUALITÀ
-</div>
-
-<h1>
-Trova il tuo<br>
-prossimo spazio.
-</h1>
-
-<p>
-Case, appartamenti e proprietà selezionate
-per trovare la soluzione giusta per te.
-</p>
-
-<a href="#immobili" class="btn" style="background:#fff;color:#174d69;">
-Scopri gli immobili
-</a>
-
-</div>
-
-</div>
-
-
-<div class="properties" id="immobili">
-
-<div class="demo-title">
-
-<h2>Immobili in evidenza</h2>
-
-<p style="color:#71808c;">
-Le nostre proposte.
-</p>
-
-</div>
-
-
-<div class="property-grid">
-
-<div class="property">
-
-<div class="property-image"></div>
-
-<div class="property-info">
-<h3>Villa moderna</h3>
-<p>3 camere • 2 bagni • 180 m²</p>
-<strong>€420.000</strong>
-</div>
-
-</div>
-
-
-<div class="property">
-
-<div class="property-image"></div>
-
-<div class="property-info">
-<h3>Appartamento centro</h3>
-<p>2 camere • 1 bagno • 95 m²</p>
-<strong>€245.000</strong>
-</div>
-
-</div>
-
-
-<div class="property">
-
-<div class="property-image"></div>
-
-<div class="property-info">
-<h3>Attico panoramico</h3>
-<p>3 camere • 2 bagni • 140 m²</p>
-<strong>€390.000</strong>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 
 <script>
 
-function openDemo(name){
+/* =========================
+   FAQ
+========================= */
 
-    document.querySelectorAll('.demo-overlay')
-    .forEach(function(demo){
-        demo.classList.remove('active');
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+
+    const button = item.querySelector('.faq-question');
+
+    button.addEventListener('click', () => {
+
+        faqItems.forEach(other => {
+            if (other !== item) {
+                other.classList.remove('active');
+            }
+        });
+
+        item.classList.toggle('active');
+
     });
 
-    document.getElementById(name).classList.add('active');
+});
 
-    document.body.style.overflow='hidden';
+/* =========================
+   3D MOUSE / TOUCH EFFECT
+========================= */
 
-    window.scrollTo(0,0);
-}
+const orb = document.querySelector('.orb');
+const visual = document.querySelector('.hero-visual');
 
-function closeDemo(){
+visual.addEventListener('mousemove', (e) => {
 
-    document.querySelectorAll('.demo-overlay')
-    .forEach(function(demo){
-        demo.classList.remove('active');
+    const rect = visual.getBoundingClientRect();
+
+    const x = (e.clientX - rect.left) / rect.width - .5;
+    const y = (e.clientY - rect.top) / rect.height - .5;
+
+    orb.style.transform =
+        `translateY(${y * -18}px) rotateY(${x * 18}deg) rotateX(${y * -12}deg)`;
+
+});
+
+visual.addEventListener('mouseleave', () => {
+    orb.style.transform = '';
+});
+
+/* Touch */
+
+visual.addEventListener('touchmove', (e) => {
+
+    const touch = e.touches[0];
+    const rect = visual.getBoundingClientRect();
+
+    const x = (touch.clientX - rect.left) / rect.width - .5;
+    const y = (touch.clientY - rect.top) / rect.height - .5;
+
+    orb.style.transform =
+        `translateY(${y * -12}px) rotateY(${x * 15}deg)`;
+
+}, {passive:true});
+
+/* =========================
+   REVEAL ON SCROLL
+========================= */
+
+const revealElements = document.querySelectorAll(
+    '.service, .project, .price-card, .feature'
+);
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+
+        }
+
     });
 
-    document.body.style.overflow='auto';
-}
+}, {
+    threshold: .12
+});
 
-document.addEventListener('keydown',function(event){
+revealElements.forEach(el => {
 
-    if(event.key==='Escape'){
-        closeDemo();
-    }
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(25px)';
+    el.style.transition = 'opacity .7s ease, transform .7s ease';
+
+    observer.observe(el);
 
 });
 
