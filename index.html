@@ -2489,6 +2489,104 @@ if(heroVisual && orb){
 }
 
 </script>
+<!-- ===== MONDO DIGITAL - AGGIUNTA 3D + INSTAGRAM ===== -->
 
+<style>
+/* Scritta 3D animata sullo sfondo */
+.mondo-3d-bg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-8deg);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(70px, 15vw, 220px);
+    font-weight: 900;
+    letter-spacing: -8px;
+    white-space: nowrap;
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(255,255,255,0.08);
+    text-shadow:
+        8px 8px 0 rgba(255,255,255,0.025),
+        16px 16px 0 rgba(255,255,255,0.02),
+        24px 24px 0 rgba(255,255,255,0.015);
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+    animation: mondo3D 8s ease-in-out infinite alternate;
+}
+
+/* Movimento 3D */
+@keyframes mondo3D {
+    0% {
+        transform: translate(-50%, -50%) rotate(-8deg) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -53%) rotate(-4deg) scale(1.04);
+    }
+
+    100% {
+        transform: translate(-50%, -47%) rotate(-10deg) scale(1);
+    }
+}
+
+/* Pulsante Instagram */
+.mondo-instagram {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 18px;
+    padding: 13px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+    box-shadow: 0 8px 25px rgba(131,58,180,0.30);
+    transition: all 0.3s ease;
+}
+
+.mondo-instagram:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(131,58,180,0.45);
+}
+
+.mondo-instagram-icon {
+    font-size: 20px;
+}
+
+/* Versione smartphone */
+@media (max-width: 600px) {
+    .mondo-3d-bg {
+        font-size: 75px;
+        letter-spacing: -4px;
+        opacity: 0.7;
+    }
+
+    .mondo-instagram {
+        padding: 12px 19px;
+        font-size: 14px;
+    }
+}
+</style>
+
+<!-- Scritta 3D sullo sfondo -->
+<div class="mondo-3d-bg">MONDO DIGITAL</div>
+
+<!-- Instagram -->
+<a
+    class="mondo-instagram"
+    href="https://www.instagram.com/mondodigital.service/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Apri Instagram Mondo Digital"
+>
+    <span class="mondo-instagram-icon">◎</span>
+    Seguici su Instagram
+</a>
+
+<!-- ===== FINE AGGIUNTA ===== -->
 </body>
 </html>
